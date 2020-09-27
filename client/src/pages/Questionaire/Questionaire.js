@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "./Questionaire.css";
-const energyLevels = ['Mellow', 'Moderate', 'High', 'Hyper']
+const energyLevels = ['Mellow', 'Moderate', 'High', 'Hyper'];
+const allergies = ['Short', 'Medium', 'Long']
+
 
 export default () => {
   const [prefs, setPrefs] = useState({
       size: 5,
       age: 1,
-      energy: 0
+      energy: 0,
+      gender: 0,
+      allergies: 0
   });
   const handleInputChange = ({ target: { name, value } }) =>
     setPrefs({ ...prefs, [name]: value });
@@ -32,6 +36,29 @@ export default () => {
               <option>Chihuahua</option>
               <option>Terrier</option>
             </select>
+          </div>
+          <legend>Gender</legend>
+          <div className="form-group">
+            <div className="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                className="custom-control-input"
+                id="customCheck1"
+              />
+              <label className="custom-control-label" for="customCheck1">
+                Male
+              </label>
+            </div>
+            <div className="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                className="custom-control-input"
+                id="customCheck2"
+              />
+              <label className="custom-control-label" for="customCheck2">
+               Female
+              </label>
+            </div>
           </div>
           <div className="sliders">
             <legend>Size</legend>
@@ -75,57 +102,19 @@ export default () => {
               id="energySlide"
             />
           </div>
-          <div className="form-group">
-            <div className="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                className="custom-control-input"
-                id="customCheck1"
-              />
-              <label className="custom-control-label" for="customCheck1">
-                Check this custom checkbox
-              </label>
-            </div>
-            <div className="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                className="custom-control-input"
-                id="customCheck2"
-              />
-              <label className="custom-control-label" for="customCheck2">
-                Disabled custom checkbox
-              </label>
-            </div>
-          </div>
-          <div className="form-group">
-            <div className="custom-control custom-switch">
-              <input
-                type="checkbox"
-                className="custom-control-input"
-                id="customSwitch1"
-              />
-              <label className="custom-control-label" for="customSwitch1">
-                Toggle this switch element
-              </label>
-            </div>
-            <div className="custom-control custom-switch">
-              <input
-                type="checkbox"
-                className="custom-control-input"
-                id="customSwitch2"
-              />
-              <label className="custom-control-label" for="customSwitch2">
-                Disabled switch element
-              </label>
-            </div>
-          </div>
-          <div className="form-group">
-            <select className="custom-select">
-              <option selected="">Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+          <div className="sliders">
+            <legend>Allergies</legend>
+            <label for="allergiesSlide">{allergies[prefs.allergies]}</label>
+            <input
+              name="allergies"
+              defaultValue="0"
+              onChange={handleInputChange}
+              min="0"
+              max="2"
+              type="range"
+              className="custom-range"
+              id="alergiesSlide"
+            />
           </div>
         </form>
       </div>

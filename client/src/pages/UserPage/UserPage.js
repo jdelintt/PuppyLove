@@ -9,7 +9,7 @@ import slide02 from "../../Images/slide02.jpg";
 import slide03 from "../../Images/slide03.jpg";
 import slide04 from "../../Images/slide04.jpg";
 import slide05 from "../../Images/slide05.jpg";
-import Footer from "../../components/Footer"
+
 
 
 
@@ -22,7 +22,7 @@ function User() {
         <Container style={{ maxWidth: "2000px" }}>
             <Row>
                 <Col size="md-4">
-                    <Card/>
+                    <Card header="My Recent Pups"/>
                     
                 </Col>
                 <Col size="md-4">
@@ -46,14 +46,12 @@ function User() {
 
                 </Col>
                 <Col size="md-4">
-                    <Card/>
+                    <Card header="Dogs In My Area"/>
                 </Col>
 
             </Row>
 
         </Container>
-        
-            <Footer></Footer>
         
 
     </div>

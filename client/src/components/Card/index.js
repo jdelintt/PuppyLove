@@ -14,19 +14,22 @@ const styles = {
     padding: "0 20px"
      
    }
-  
-  
 }
 
-function Card() {
+const cardText = {
+  "My Recent Pups": "Dogs I recently interacted with.",
+  "Dogs In My Area": "Find pups that are close to me."
+}
+
+function Card({header}) {
   return (
     <div className="card text-center">
     <div style={styles.header}className="card-header">
-      My recent pups
+      {header}
     </div>
     <div className="card-body" >
       
-      <h5 style={styles.card}className="card-title">Dogs i have recently interacted with</h5>
+      <h5 style={styles.card}className="card-title">{cardText[header]}</h5>
       <a href="/#" className="btn btn-primary">See more pups</a>
     </div>
     <div className="card-footer text-muted">

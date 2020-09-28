@@ -5,6 +5,7 @@ import Questionaire from "./pages/Questionaire/Questionaire";
 import UserPage from './pages/UserPage/UserPage'
 import Nav from "./components/Nav/Nav";
 import "./App.css";
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/hang" component={Questionaire} />
         </Switch>
         <div id="bgOverlay"></div>
+        <Footer/>
       </Router>
     </>
   );

@@ -2,8 +2,8 @@ import React from "react"
 
 
 var style = {
-    backgroundColor: "orange",
-    borderTop: "1px solid #E7E7E7",
+    // backgroundColor: "orange",
+    // borderTop: "1px solid #E7E7E7",
     textAlign: "center",
     padding: "20px",
     // position: "fixed",
@@ -23,32 +23,12 @@ var phantom = {
 function Footer({ children }) {
     return (
         <div>
-            <div style={phantom} />
-            <div style={style}>
-                { children }
+            {/* <div style={phantom} /> */}
+            <div className="navbar navbar-info bg-info mt-5 justify-content-center" style={style}>
+                { children || <h3 className="mt-n2" style={{textAlign: "center"}}>Copyright 2020</h3> }
             </div>
         </div>
     )
 }
-// const styles = {
-//     footer: {
-//     position: "fixed",
-//    left: 0,
-//    bottom: 0,
-//    width: 100,
-//    backgroundColor: "orange",
-// }
-
-
-// }
-
-
-// function Footer() {
-//     return (
-//         <div style={styles.footer} class="footer">
-  
-// </div>
-//     );
-// }
 
 export default Footer

@@ -1,3 +1,3 @@
 module.exports = {
-  questionaire: require("./questionaire"),
+  Questionaire: require("./questionaire"),
 };

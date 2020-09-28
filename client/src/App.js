@@ -15,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={UserPage} />
           <Route exact path="/hang" component={Questionaire} />
+          <Route exact path="/signup" component={Dashboard} />
         </Switch>
         <div id="bgOverlay"></div>
         <Footer/>

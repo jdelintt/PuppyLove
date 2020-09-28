@@ -13,6 +13,7 @@ import slide05 from "../../Images/slide05.jpg";
 
 
 
+
 // import Navbar from "./components/NavBar"
 
 function User() {
@@ -23,6 +24,7 @@ function User() {
             <Row>
                 <Col size="md-4">
                     <Card header="My Recent Pups"/>
+
                     
                 </Col>
                 <Col size="md-4">

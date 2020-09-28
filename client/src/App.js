@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Questionaire from "./pages/Questionaire/Questionaire";
-import UserPage from './pages/UserPage/UserPage'
+import UserPage from "./pages/UserPage/UserPage";
 import Nav from "./components/Nav/Nav";
 import "./App.css";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,7 +17,8 @@ function App() {
           <Route exact path="/hang" component={Questionaire} />
         </Switch>
         <div id="bgOverlay"></div>
-        <Footer/>
+        <Footer />
+        {/* style={{ position: absolute, bottom: 10 }} */}
       </Router>
     </>
   );

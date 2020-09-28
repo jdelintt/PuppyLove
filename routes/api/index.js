@@ -1,7 +1,6 @@
 const router = require("express").Router();
-const preferenceRoutes = require("./books");
+const preferenceRoutes = require("./dogs");
 
-// Book routes
 router.use("/preference", preferenceRoutes);
 
 module.exports = router;

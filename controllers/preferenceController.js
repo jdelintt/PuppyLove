@@ -29,4 +29,10 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+  findDog: function (req, res) {
+    db.Questionaire.findById({ name: "Henry" })
+      .then((dbModel) => res.json(dbModel))
+
+      .catch((err) => res.status(422).json(err));
+  },
 };

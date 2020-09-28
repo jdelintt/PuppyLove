@@ -7,3 +7,7 @@ const questionaireSchema = new Schema({
   age: { type: Interger, required: true },
   energyLevel: { type: Interger, required: true },
 });
+
+const Dogs = mongoose.model("Dogs", questionaireSchema);
+
+module.exports = Dogs;

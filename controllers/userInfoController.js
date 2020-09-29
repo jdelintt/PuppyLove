@@ -1,49 +1,50 @@
 const db = require("../models");
+console.log(db);
 
 // interacting with database
 module.exports = {
   findAll: function (req, res) {
-    db.userInfo
-      .find(req.query)
+    console.log(db);
+    console.log(db.User);
+    db.UserInfo.find(req.query)
       .sort({ name: -1 })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    db.userInfo
-      .findById(req.params.id)
+    db.UserInfo.findById(req.params.id)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   //queries all the matching dogs
-  findMatch: function (req, res) {
-    db.userInfo
-      .where()
-      .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
-  },
+  // findMatch: function (req, res) {
+  //   db.UserInfo
+  //     .find(
+  //       {where : }
+  //     )
+  //     .then((dbModel) => res.json(dbModel))
+  //     .catch((err) => res.status(422).json(err));
+  // },
   create: function (req, res) {
-    db.userInfo
-      .create(req.body)
+    console.log(req.body);
+    console.log(db.UserInfo);
+    db.UserInfo.create(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   update: function (req, res) {
-    db.userInfo
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+    db.UserInfo.findOneAndUpdate({ _id: req.params.id }, req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   remove: function (req, res) {
-    db.userInfo
-      .findById({ _id: req.params.id })
+    db.UserInfo.findById({ _id: req.params.id })
       .then((dbModel) => dbModel.remove())
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   findDog: function (req, res) {
-    db.userInfo
-      .findById({ name: "Henry" })
+    db.UserInfo.findById({ name: "Henry" })
       .then((dbModel) => res.json(dbModel))
 
       .catch((err) => res.status(422).json(err));

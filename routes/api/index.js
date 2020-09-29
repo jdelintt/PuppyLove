@@ -4,6 +4,6 @@ const petfinderRoutes = require("./petfinder");
 
 // Book routes
 router.use("/preference", userInfoRoutes);
-router.use("/petfinder", petfinderRoutes);
+// router.use("/petfinder", petfinderRoutes);
 
 module.exports = router;

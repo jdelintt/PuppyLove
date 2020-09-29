@@ -4,17 +4,23 @@ const Schema = mongoose.Schema;
 const UserInfoSchema = new Schema({
   userinfo: {
     credidentails: {
-      id: { type: string, required: true },
-      password: { type: string, required: true },
+      id: { type: String },
+      password: { type: String },
     },
-    name: { type: String, required: true },
+    name: { type: String },
   },
-  breed: [{ type: String, required: true }],
-  size: { type: Interger, required: true },
-  age: { type: Interger, required: true },
-  energyLevel: { type: Interger, required: true },
+  name: String,
+  breed: [{ type: String }],
+  size: { type: Number },
+  age: { type: Number },
+  energyLevel: { type: Number },
   history: {
-    dogs: [{ type: Array, default: [], required: true }],
+    dogs: [{ type: Array, default: [] }],
   },
-  userBackgroundCheck: { type: Boolean, required: true },
+  userBackgroundCheck: { type: Boolean },
+  image: String,
 });
+
+const User = mongoose.model("User", UserInfoSchema);
+
+module.exports = User;

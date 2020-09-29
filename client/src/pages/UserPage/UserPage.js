@@ -19,12 +19,27 @@ import Loading from "../../components/Loading/Loading";
 // import Navbar from "./components/NavBar"
 
 function User() {
-    const [isLoading, setLoading] = useState(true)
+    const [isLoading, setLoading] = useState(false)
+
+    const delay = (v) => {
+        return new Promise((resolve) => {
+            setTimeout(resolve.bind(null, v), 5000)
+        })
+    }
+
+    const mockAPI = (e) => {
+        e.preventDefault();
+        setLoading(true);
+        delay().then(() => {
+            setLoading(false)
+        })
+    }
     return (
     
     <div style={{width: '100%', height: '100%'}}>
         {isLoading && <Loading/>}
         {!isLoading && <Container style={{ maxWidth: "2000px" }}>
+            <button onClick={mockAPI}>Mock API Call</button>
             <Row>
                 <Col size="md-4">
                     <Card header="My Recent Pups"/>

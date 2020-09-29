@@ -1,11 +1,15 @@
 import React from "react";
 import {Form, Button} from "react-bootstrap"
 import Container from "../../components/Container"
+import {Animated} from "react-animated-css";
+
 
 function Signup(){
   return (
 <Container style={{ maxWidth:"600px"}}>
-  <h1>Puppy Love</h1>
+<Animated animationIn="wobble" animationOut="fadeOut" isVisible={true}>
+<h1>Puppy Love</h1>
+</Animated>
 <Form>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>

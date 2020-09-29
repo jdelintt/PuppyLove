@@ -1,4 +1,7 @@
 import React from "react";
+// import { Image } from "react-bootstrap"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaw,faDog } from '@fortawesome/free-solid-svg-icons'
 
 const styles = {
   card: {
@@ -25,15 +28,20 @@ function Card({header}) {
   return (
     <div className="card text-center">
     <div style={styles.header}className="card-header">
-      {header}
+{header}
+    <FontAwesomeIcon icon={faDog}></FontAwesomeIcon>
     </div>
     <div className="card-body" >
       
       <h5 style={styles.card}className="card-title">{cardText[header]}</h5>
+
+      {/* <Image src="https://i.redd.it/nl6vkfxnebr21.jpg" width="100px" height="100px" roundedCircle /> */}
+
       <a href="/#" className="btn btn-primary">See more pups</a>
     </div>
+    
     <div className="card-footer text-muted">
-      2 days ago
+    <FontAwesomeIcon icon={faPaw}></FontAwesomeIcon>
     </div>
   </div>
   )

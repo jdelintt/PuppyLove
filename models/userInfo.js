@@ -9,12 +9,15 @@ const UserInfoSchema = new Schema({
     },
     name: { type: String },
   },
-  name: String,
+  name: { type: String },
   breed: [{ type: String }],
   size: { type: Number },
   age: { type: Number },
   energyLevel: { type: Number },
   history: {
+    dogs: [{ type: Array, default: [] }],
+  },
+  matchedDogs: {
     dogs: [{ type: Array, default: [] }],
   },
   userBackgroundCheck: { type: Boolean },

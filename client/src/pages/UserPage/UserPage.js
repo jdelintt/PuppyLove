@@ -27,11 +27,19 @@ function User() {
         })
     }
 
+    // Set load state to true
+    // make API call
+    // When API resolves (Success or Failure)
+    // Set load state to false
     const mockAPI = (e) => {
         e.preventDefault();
-        setLoading(true);
+        setLoading(true)
         delay().then(() => {
+            //throw new Error('Error')
             setLoading(false)
+        }).catch((error) => {
+            setLoading(false);
+            console.error(error)
         })
     }
     return (

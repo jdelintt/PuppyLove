@@ -7,7 +7,7 @@ import {Animated} from "react-animated-css";
 function Signup(){
   return (
 <Container style={{ maxWidth:"600px"}}>
-<Animated animationIn="wobble" animationOut="fadeOut" isVisible={true}>
+<Animated animationIn="wobble" animationOut="fadeOut" animationInDuration={1000} isVisible={true}>
 <h1>Puppy Love</h1>
 </Animated>
 <Form>

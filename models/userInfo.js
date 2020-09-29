@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const UserInfoSchema = new Schema({
+  //userinfo
   userinfo: {
     credidentails: {
       id: { type: String },
@@ -9,11 +10,13 @@ const UserInfoSchema = new Schema({
     },
     name: { type: String },
   },
+  //dog pref
   name: { type: String },
   breed: [{ type: String }],
   size: { type: Number },
   age: { type: Number },
   energyLevel: { type: Number },
+  //mainpage
   history: {
     dogs: [{ type: Array, default: [] }],
   },

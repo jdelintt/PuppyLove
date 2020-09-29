@@ -16,8 +16,8 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
-  //queries all the matching dogs
-  // findMatch: function (req, res) {
+  // queries all the matching dogs
+  // dogHistory: function (req, res) {
   //   db.UserInfo
   //     .find(
   //       {where : }

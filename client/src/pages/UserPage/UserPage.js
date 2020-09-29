@@ -36,7 +36,7 @@ function User() {
             
             <Row>
                 <Col size="md-4">
-                    <Card setLoading={setLoadingState} header="My Recent Pups"/>
+                    <Card setLoading={setLoadingState} header="My Recent Pups" link1="https://i.pinimg.com/originals/e6/3d/2c/e63d2c80d0603f41f9455a5389694fae.jpg" link2="https://pyxis.nymag.com/v1/imgs/1fa/1b2/4ae76fa8c9910485045e4f9a956345903b-18-puppy-dog-eyes.rsquare.w1200.jpg" isFirstCard={true}/>
 
                     
                 </Col>
@@ -61,7 +61,7 @@ function User() {
 
                 </Col>
                 <Col size="md-4">
-                    <Card setLoading={setLoadingState} header="Dogs In My Area"/>
+                    <Card setLoading={setLoadingState} header="Dogs In My Area" link1="https://i.pinimg.com/originals/e6/3d/2c/e63d2c80d0603f41f9455a5389694fae.jpg" link2="https://pyxis.nymag.com/v1/imgs/1fa/1b2/4ae76fa8c9910485045e4f9a956345903b-18-puppy-dog-eyes.rsquare.w1200.jpg" isFirstCard={false}/>
                 </Col>
 
             </Row>

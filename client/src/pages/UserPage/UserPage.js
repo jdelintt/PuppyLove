@@ -20,11 +20,13 @@ import Loading from "../../components/Loading/Loading";
 
 function User() {
     const [isLoading, setLoading] = useState(false)
+    const [userData, setUserData] = useState();
     
     const setLoadingState = (value) => {
         setLoading(value)
     }
-
+    
+    
     
     return (
     
@@ -34,7 +36,7 @@ function User() {
             
             <Row>
                 <Col size="md-4">
-                    <Card header="My Recent Pups"/>
+                    <Card setLoading={setLoadingState} header="My Recent Pups"/>
 
                     
                 </Col>

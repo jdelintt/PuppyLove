@@ -1,3 +1,3 @@
 module.exports = {
-  userInfo: require("./userInfo"),
+  UserInfo: require("./userInfo"),
 };

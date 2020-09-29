@@ -2,19 +2,31 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const UserInfoSchema = new Schema({
+  //userinfo
   userinfo: {
     credidentails: {
-      id: { type: string, required: true },
-      password: { type: string, required: true },
+      id: { type: String },
+      password: { type: String },
     },
-    name: { type: String, required: true },
+    name: { type: String },
   },
-  breed: [{ type: String, required: true }],
-  size: { type: Interger, required: true },
-  age: { type: Interger, required: true },
-  energyLevel: { type: Interger, required: true },
+  //dog pref
+  name: { type: String },
+  breed: [{ type: String }],
+  size: { type: Number },
+  age: { type: Number },
+  energyLevel: { type: Number },
+  //mainpage
   history: {
-    dogs: [{ type: Array, default: [], required: true }],
+    dogs: [{ type: Array, default: [] }],
   },
-  userBackgroundCheck: { type: Boolean, required: true },
+  matchedDogs: {
+    dogs: [{ type: Array, default: [] }],
+  },
+  userBackgroundCheck: { type: Boolean },
+  image: String,
 });
+
+const UserInfo = mongoose.model("User", UserInfoSchema);
+
+module.exports = UserInfo;

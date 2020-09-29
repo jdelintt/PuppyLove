@@ -20,34 +20,18 @@ import Loading from "../../components/Loading/Loading";
 
 function User() {
     const [isLoading, setLoading] = useState(false)
-
-    const delay = (v) => {
-        return new Promise((resolve) => {
-            setTimeout(resolve.bind(null, v), 5000)
-        })
+    
+    const setLoadingState = (value) => {
+        setLoading(value)
     }
 
-    // Set load state to true
-    // make API call
-    // When API resolves (Success or Failure)
-    // Set load state to false
-    const mockAPI = (e) => {
-        e.preventDefault();
-        setLoading(true)
-        delay().then(() => {
-            //throw new Error('Error')
-            setLoading(false)
-        }).catch((error) => {
-            setLoading(false);
-            console.error(error)
-        })
-    }
+    
     return (
     
     <div style={{width: '100%', height: '100%'}}>
         {isLoading && <Loading/>}
         {!isLoading && <Container style={{ maxWidth: "2000px" }}>
-            <button onClick={mockAPI}>Mock API Call</button>
+            
             <Row>
                 <Col size="md-4">
                     <Card header="My Recent Pups"/>
@@ -75,7 +59,7 @@ function User() {
 
                 </Col>
                 <Col size="md-4">
-                    <Card header="Dogs In My Area"/>
+                    <Card setLoading={setLoadingState} header="Dogs In My Area"/>
                 </Col>
 
             </Row>

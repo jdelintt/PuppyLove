@@ -21,9 +21,32 @@ const cardText = {
   "Dogs In My Area": "Find pups that are close to me."
 }
 
-function Card({header}) {
+function Card({header, setLoading}) {
+  const delay = (v) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve.bind(null, v), 5000)
+    })
+  }
+
+// Set load state to true
+// make API call
+// When API resolves (Success or Failure)
+// Set load state to false
+const mockAPI = (e) => {
+    e.preventDefault();
+    setLoading(true)
+    delay().then(() => {
+        //throw new Error('Error')
+        setLoading(false)
+    }).catch((error) => {
+        setLoading(false);
+        console.error(error)
+    })
+}
   return (
+    
     <div className="card text-center">
+    <button onClick={mockAPI}>Mock API Call</button>
     <div style={styles.header}className="card-header">
       {header}
     </div>

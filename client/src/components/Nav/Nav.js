@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-info bg-info">
-      <a className="navbar-brand" href="/">
-        Puppy Love
-      </a>
+      <Link to="/">
+        <a className="navbar-brand">Puppy Love</a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarColor03"
+        data-target="#navbarColor01"
         aria-controls="navbarColor03"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -20,52 +21,20 @@ const Navbar = () => {
 
       <div className="collapse navbar-collapse" id="navbarColor03">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="/hang">
-              Hang with a pup
-            </a>
+          <li className="nav-item">
+          <Link to="/hang" className="nav-link nav-item navbar-brand">
+              Preferences
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Features
-            </a>
+          <Link to="/hang" className="nav-link nav-item navbar-brand">
+              Play Date
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Pricing
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link to="/hang" className="nav-link nav-item navbar-brand">
               About
-            </a>
-          </li>
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div className="dropdown-menu">
-              <a className="dropdown-item" href="#">
-                Action
-              </a>
-              <a className="dropdown-item" href="#">
-                Another action
-              </a>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="#">
-                Separated link
-              </a>
-            </div>
+            </Link>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
@@ -83,5 +52,4 @@ const Navbar = () => {
   );
 };
 
-
-export default Navbar
+export default Navbar;

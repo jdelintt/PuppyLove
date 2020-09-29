@@ -21,12 +21,12 @@ function User() {
     <div>
         <Container style={{ maxWidth: "2000px" }}>
             <Row>
-                <Col size="md-4">
+                <Col size="md-4 sm-12">
                     <Card header="My Recent Pups"/>
                     
                 </Col>
-                <Col size="md-4">
-                    <Carousel>
+                <Col size="md-4 sm-12">
+                    <Carousel style={{margin:"auto"}}>
                         <Carousel.Item>
                             <img src={slide01} alt="chubby dog"/>
                         </Carousel.Item>
@@ -45,7 +45,7 @@ function User() {
                     </Carousel>
 
                 </Col>
-                <Col size="md-4">
+                <Col size="md-4 sm-12">
                     <Card header="Dogs In My Area"/>
                 </Col>
 

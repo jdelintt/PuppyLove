@@ -6,6 +6,8 @@ import UserPage from './pages/UserPage/UserPage'
 import Nav from "./components/Nav/Nav";
 import "./App.css";
 import Footer from "./components/Footer"
+import BackgroundCheck from "./pages/BackgroundCheck/BackgroundCheck";
+import About from "./pages/About/About"
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={UserPage} />
+          <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />
         </Switch>
         <div id="bgOverlay"></div>

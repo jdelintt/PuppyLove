@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
@@ -9,6 +9,8 @@ import slide02 from "../../Images/slide02.jpg";
 import slide03 from "../../Images/slide03.jpg";
 import slide04 from "../../Images/slide04.jpg";
 import slide05 from "../../Images/slide05.jpg";
+import Loading from "../../components/Loading/Loading";
+
 
 
 
@@ -17,10 +19,12 @@ import slide05 from "../../Images/slide05.jpg";
 // import Navbar from "./components/NavBar"
 
 function User() {
+    const [isLoading, setLoading] = useState(true)
     return (
     
-    <div>
-        <Container style={{ maxWidth: "2000px" }}>
+    <div style={{width: '100%', height: '100%'}}>
+        {isLoading && <Loading/>}
+        {!isLoading && <Container style={{ maxWidth: "2000px" }}>
             <Row>
                 <Col size="md-4">
                     <Card header="My Recent Pups"/>
@@ -53,8 +57,7 @@ function User() {
 
             </Row>
 
-        </Container>
-        
+        </Container>}
 
     </div>
     

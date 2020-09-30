@@ -2,6 +2,7 @@ import React from "react";
 // import { Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw, faDog } from "@fortawesome/free-solid-svg-icons";
+import API from "../../utils/API";
 
 const styles = {
   card: {

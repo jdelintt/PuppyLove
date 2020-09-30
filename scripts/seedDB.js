@@ -11,7 +11,7 @@ const dogSeed = [
     breed: "German Shepard",
     age: 15,
     energyLevel: 10,
-    image: "https://localhost3000:/dogpics/German.jpg",
+    image: "/dogpics/German.jpg",
   },
   {
     name: "Fred",

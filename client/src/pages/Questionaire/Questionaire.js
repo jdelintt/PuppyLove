@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Questionaire.css";
+import API from "../../utils/API";
 const energyLevels = ["Mellow", "Moderate", "High", "Hyper"];
 const allergies = ["Short", "Medium", "Long"];
 
@@ -25,8 +26,9 @@ export default () => {
 
   const onSubmit = () => {
     console.log(APIdata);
+    API.createPref(APIdata);
   };
-
+  //event.target.checked
   const handleInputChange = ({ target: { name, value } }) =>
     setPrefs({ ...prefs, [name]: value });
   console.log(prefs);
@@ -56,6 +58,7 @@ export default () => {
           <div className="form-group">
             <div className="custom-control custom-checkbox">
               <input
+                name="gender"
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck1"
@@ -67,6 +70,7 @@ export default () => {
             </div>
             <div className="custom-control custom-checkbox">
               <input
+                name="gender"
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck2"
@@ -137,6 +141,9 @@ export default () => {
               value={setData.allergies}
             />
           </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </form>
       </div>
     </>

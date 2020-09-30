@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Image, Modal, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw, faDog } from "@fortawesome/free-solid-svg-icons";
 // import Modal from "../../components/Modal";
-// import API from "../../utils/API";
+import API from "../../utils/API";
 
 const styles = {
   card: {

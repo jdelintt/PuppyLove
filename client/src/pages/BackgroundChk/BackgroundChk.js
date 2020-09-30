@@ -20,6 +20,10 @@ function BackgroundChk(){
     <Form.Control type="birthDate" placeholder="Birth Date" />
   </Form.Group>
 
+  <Form.Group controlId="formGovID">
+    <Form.Control type="govID" placeholder="Government Issued ID Number" />
+  </Form.Group>
+
   <Button variant="primary" type="submit">
     Submit
   </Button>

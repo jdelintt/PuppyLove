@@ -11,13 +11,13 @@ const UserInfoSchema = new Schema({
     name: { type: String },
   },
   //dog pref
-  name: { type: String },
   breed: [{ type: String }],
-  femalePref: { type: Boolean },
   malePref: { type: Boolean },
+  femalePref: { type: Boolean },
   size: { type: Number },
   age: { type: Number },
   energyLevel: { type: Number },
+  allergies: { type: String },
   //mainpage
   history: {
     dogs: [{ type: Array, default: [] }],

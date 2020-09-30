@@ -34,9 +34,21 @@ const cardText = {
 
 function Card({ header, setLoading, link1, link2, isFirstCard }) {
   const [show, setShow] = useState(false);
+  const [dog, fillDogs] = useState([]);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  useEffect(() => {
+    findDogs();
+  }, []);
+
+  function findDogs() {
+    API.getDogs()
+      .then((res) => fillDogs(res.data))
+      .catch((err) => console.log(err));
+    // Add code here to get all books from the database and store them using setBooks
+  }
 
   const delay = (v) => {
     return new Promise((resolve) => {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Questionaire.css";
 import API from "../../utils/API";
 const energyLevels = ["Mellow", "Moderate", "High", "Hyper"];
@@ -14,6 +14,8 @@ export default () => {
   });
 
   //data
+  const [breedData, setBreed] = useState();
+
   const [APIdata, setData] = useState({
     breed: "",
     malePref: "",
@@ -24,7 +26,18 @@ export default () => {
     allergies: "",
   });
 
-  const onSubmit = () => {
+  // useEffect(() => {
+  //   getBreedList();
+  // }, []);
+
+  // function getBreedList() {
+  //   API.getBreed()
+  //     .then((res) => setBreed(res))
+  //     .catch((err) => console.log(err));
+  // }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
     console.log(APIdata);
     API.createPref(APIdata);
   };
@@ -32,6 +45,9 @@ export default () => {
   const handleInputChange = ({ target: { name, value } }) =>
     setPrefs({ ...prefs, [name]: value });
   console.log(prefs);
+
+  // if (!breedData) return <h1>Loading...</h1>;
+  console.log(breedData);
   return (
     <>
       <h1 className="mt-3 mb-5" style={{ textAlign: "center" }}>
@@ -40,6 +56,22 @@ export default () => {
       <div className="container">
         <form>
           <div class="form-group">
+            {/* from Brian's code */}
+            {/* <input
+              value={setData.breed}
+              onChange={handleInputChange}
+              name="breed"
+              list="breeds"
+              type="text"
+              className="form-control"
+              placeholder="Type in a dog breed to begin"
+              id="breed"
+            />
+            <datalist id="breeds"> */}
+            {/* {breedData.breeds.map((breed) => (
+                <option value={breed} key={breed} />
+              ))} */}
+            {/* </datalist> */}
             <label for="breedInput">Select Breed</label>
             <datalist
               name="breed"
@@ -141,7 +173,10 @@ export default () => {
               value={setData.allergies}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="btn btn-primary">
             Submit
           </button>
         </form>

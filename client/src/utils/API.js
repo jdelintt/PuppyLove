@@ -10,7 +10,7 @@ export default {
   },
 
   createPref: function (data) {
-    axios.post("/api/userinfo", data);
+    axios.post("/api/userInfo", data);
   },
 
   // this returns all of the dogs in the database

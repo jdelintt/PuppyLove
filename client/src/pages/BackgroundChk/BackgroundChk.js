@@ -6,7 +6,7 @@ function SubmitInfo(){
   return (
 <Container style={{ maxWidth:"600px"}}>
   <h1>Puppy Love</h1>
-  <p>Puppies are a lot of responsibility! Before we dive in to all the puppies available for lovin' in your area, please give us your first and last legal name so we may do a cursory background check. We will never sell, appropriate, or abuse your information.</p>
+  <p>Puppies are a lot of responsibility! Before we dive in to all the puppies that need lovin' in your area, please give us your first and last legal name so we may do a cursory background check. We will never sell, appropriate, or abuse your information.</p>
 <Form>
   <Form.Group controlId="formFirstName">
     <Form.Label>First Name</Form.Label>

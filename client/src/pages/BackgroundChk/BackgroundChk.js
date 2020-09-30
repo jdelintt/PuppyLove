@@ -2,7 +2,7 @@ import React from "react";
 import {Form, Button} from "react-bootstrap"
 import Container from "../../components/Container"
 
-function SubmitInfo(){
+function BackgroundChk(){
   return (
 <Container style={{ maxWidth:"600px"}}>
   <h1>Puppy Love</h1>
@@ -25,4 +25,4 @@ function SubmitInfo(){
 </Container>
   )
 }
-export default SubmitInfo;
+export default BackgroundChk;

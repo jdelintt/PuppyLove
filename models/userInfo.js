@@ -13,6 +13,8 @@ const UserInfoSchema = new Schema({
   //dog pref
   name: { type: String },
   breed: [{ type: String }],
+  femalePref: { type: Boolean },
+  malePref: { type: Boolean },
   size: { type: Number },
   age: { type: Number },
   energyLevel: { type: Number },

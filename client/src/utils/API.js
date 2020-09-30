@@ -5,11 +5,13 @@ var axios = require("axios");
 axios.get("api/userinfo", function (req, res) {});
 
 export default {
-  findAll: function () {
-    return axios.get("/api/userinfo");
+  getDogs: function () {
+    return axios.get("/api/userInfo");
   },
 
   createPref: function (data) {
     axios.post("/api/userinfo", data);
   },
+
+  // this returns all of the dogs in the database
 };

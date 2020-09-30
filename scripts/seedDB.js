@@ -11,6 +11,13 @@ const dogSeed = [
     breed: "German Shepard",
     age: 15,
     energyLevel: 10,
+    image: "https://localhost3000:/dogpics/German.jpg",
+  },
+  {
+    name: "Fred",
+    breed: "Sharpe",
+    age: 15,
+    energyLevel: 10,
     // image: "",
   },
   // {
@@ -121,8 +128,8 @@ const dogSeed = [
 ];
 
 // console.log(db.userInfo);
-db.User.deleteOne({})
-  .then(() => db.User.collection.insertMany(dogSeed))
+db.UserInfo.deleteOne({})
+  .then(() => db.UserInfo.collection.insertMany(dogSeed))
   .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

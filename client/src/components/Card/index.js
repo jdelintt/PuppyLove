@@ -3,7 +3,7 @@ import { Image, Modal, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw, faDog } from "@fortawesome/free-solid-svg-icons";
 // import Modal from "../../components/Modal";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 
 const styles = {
   card: {
@@ -53,14 +53,14 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
     setLoading(true);
     delay()
       .then(() => {
-        // Set load state to true
-        // make API call
-        // When API resolves (Success or Failure)
-        // Set load state to false
-        // const mockAPI = (e) => {
+          // Set load state to true
+          // make API call
+          // When API resolves (Success or Failure)
+          // Set load state to false
+  const mockAPI = (e) => {
         //throw new Error('Error')
         setLoading(false);
-      })
+      }})
       .catch((error) => {
         setLoading(false);
         console.error(error);

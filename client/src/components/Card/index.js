@@ -65,14 +65,14 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
     setLoading(true);
     delay()
       .then(() => {
-        // Set load state to true
-        // make API call
-        // When API resolves (Success or Failure)
-        // Set load state to false
-        // const mockAPI = (e) => {
+          // Set load state to true
+          // make API call
+          // When API resolves (Success or Failure)
+          // Set load state to false
+  const mockAPI = (e) => {
         //throw new Error('Error')
         setLoading(false);
-      })
+      }})
       .catch((error) => {
         setLoading(false);
         console.error(error);

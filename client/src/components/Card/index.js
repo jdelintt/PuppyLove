@@ -10,7 +10,8 @@ import Card1 from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
 import cardsStyle from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
 import CardFooter from "../../components/Card/CardFooter.js";
-import german from "../../assets/img/dogpics/German.jpg";
+import imgCMS from "./imgCMS";
+
 
 const style = {
   ...cardsStyle
@@ -109,7 +110,7 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
       <CardHeader image>
         <a href="#pablo" onClick={e => e.preventDefault()}>
           <img
-            src = {require(`../../assets/img/dogpics/${item.image}`)}
+           src = {imgCMS[item.imagePath]}
             alt="..."
           />
         </a>

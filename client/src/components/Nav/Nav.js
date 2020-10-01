@@ -11,7 +11,7 @@ const Navbar = () => {
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarColor01"
+        data-target="#navbarColor03"
         aria-controls="navbarColor03"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -32,20 +32,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/hang" className="nav-link nav-item navbar-brand">
+            <Link to="/about" className="nav-link nav-item navbar-brand">
               About
             </Link>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
-          <input
-            className="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-          />
-          <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-            Search
-          </button>
+          
         </form>
       </div>
     </nav>

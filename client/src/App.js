@@ -15,6 +15,7 @@ function App() {
       <Router>
         <Nav />
         <Switch>
+          <Route exact path="/about" component={About}/>
           <Route exact path="/" component={UserPage} />
           <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />

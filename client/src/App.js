@@ -6,6 +6,7 @@ import UserPage from "./pages/UserPage/UserPage";
 import Nav from "./components/Nav/Nav";
 import "./App.css";
 import Footer from "./components/Footer";
+import PuppyVideo from "./pages/PuppyVideo/PuppyVideo";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={UserPage} />
           <Route exact path="/hang" component={Questionaire} />
           <Route exact path="/signup" component={Dashboard} />
+          <Route exact path="/video" component={PuppyVideo} />
         </Switch>
         <div id="bgOverlay"></div>
         <Footer />

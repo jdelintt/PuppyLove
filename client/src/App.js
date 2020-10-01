@@ -5,7 +5,9 @@ import Questionaire from "./pages/Questionaire/Questionaire";
 import UserPage from "./pages/UserPage/index";
 import Navbar from "./components/Nav/Nav";
 import "./App.css";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"
+import BackgroundCheck from "./pages/BackgroundCheck/BackgroundCheck";
+import About from "./pages/About/About"
 
 import Card from "./components/Card/index"
 import LoginPage from "./pages/Dashboard/LoginPage"
@@ -20,7 +22,9 @@ function App() {
         
         <Navbar />
         <Switch>
+          <Route exact path="/about" component={About}/>
           <Route exact path="/" component={UserPage} />
+          <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />
 
           <Route exact path="/signup" component={LoginPage} />

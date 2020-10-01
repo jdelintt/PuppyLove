@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-info bg-info">
-      <a className="navbar-brand" href="/">
-      </a>
+      <Link to="/">
+        <a className="navbar-brand">Puppy Love</a>
+      </Link>
+
       <button
         className="navbar-toggler"
         type="button"
@@ -19,43 +22,30 @@ const Navbar = () => {
 
       <div className="collapse navbar-collapse" id="navbarColor03">
         <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+          <Link to="/hang" className="nav-link nav-item navbar-brand">
+              Preferences
+            </Link>
+          </li>
+          <li className="nav-item">
+          <Link to="/hang" className="nav-link nav-item navbar-brand">
+              Play Date
+            </Link>
+          </li>
           <li className="nav-item active">
             <a className="nav-link" href="/hang">
               Hang with a pup
             </a>
           </li>
-          {/* <li className="nav-item">
-            <a className="nav-link" href="#">
-              Features
-            </a>
-          </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Pricing
-            </a>
-          </li> */}
-          <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link to="/about" className="nav-link nav-item navbar-brand">
               About
-            </a>
+            </Link>
           </li>
-
-
         </ul>
-        {/* <form className="form-inline my-2 my-lg-0">
-          <input
-            className="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-          />
-          <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form> */}
       </div>
     </nav>
   );
 };
 
-
-export default Navbar
+export default Navbar;

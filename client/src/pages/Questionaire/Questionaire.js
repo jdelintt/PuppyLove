@@ -181,6 +181,7 @@ export default () => {
               value={setData.allergies}
             />
           </div>
+
           <button
             type="submit"
             onClick={handleSubmit}

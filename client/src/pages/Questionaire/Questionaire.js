@@ -8,7 +8,7 @@ export default () => {
   const [prefs, setPrefs] = useState({
     size: 5,
     age: 1,
-    energy: 0,
+    energyLevel: 0,
     gender: 0,
     allergies: 0,
   });
@@ -18,12 +18,12 @@ export default () => {
 
   const [APIdata, setData] = useState({
     breed: "",
-    malePref: "",
-    femalePref: "",
-    size: "",
-    age: "",
-    energyLevel: energyLevels[prefs.energy],
-    allergies: allergies[prefs.allergies],
+    malePref: false,
+    femalePref: false,
+    size: 5,
+    age: 1,
+    energyLevel: 0,
+    allergies: 0,
   });
 
   console.log(APIdata);
@@ -48,8 +48,11 @@ export default () => {
   //event.target.checked
   const handleInputChange = ({ target: { name, value } }) => {
     setPrefs({ ...prefs, [name]: value });
+    console.log(prefs);
     setData({ ...APIdata, [name]: value });
   };
+
+  // const handleCheckChange =
   // console.log(prefs);
 
   // if (!breedData) return <h1>Loading...</h1>;
@@ -64,7 +67,7 @@ export default () => {
           <div class="form-group">
             {/* from Brian's code */}
             <input
-              // value={setData.breed}
+              // value={}
               onChange={handleInputChange}
               name="breed"
               list="breeds"
@@ -133,7 +136,7 @@ export default () => {
               type="range"
               className="custom-range"
               id="sizeSlide"
-              value={setData.size}
+              // value={}
             />
           </div>
           <div className="sliders">
@@ -153,7 +156,7 @@ export default () => {
           </div>
           <div className="sliders">
             <legend>Energy Level</legend>
-            <label for="energySlide">{energyLevels[prefs.energy]}</label>
+            <label for="energySlide">{energyLevels[prefs.energyLevel]}</label>
             <input
               name="energyLevel"
               defaultValue="0"
@@ -163,7 +166,7 @@ export default () => {
               type="range"
               className="custom-range"
               id="energySlide"
-              value={setData.energyLevel}
+              // value={setData.energyLevel}
             />
           </div>
           <div className="sliders">
@@ -178,7 +181,7 @@ export default () => {
               type="range"
               className="custom-range"
               id="alergiesSlide"
-              value={setData.allergies}
+              // value={setData.allergies}
             />
           </div>
           <button

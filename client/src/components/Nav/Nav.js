@@ -7,6 +7,7 @@ const Navbar = () => {
       <Link to="/">
         <a className="navbar-brand">Puppy Love</a>
       </Link>
+
       <button
         className="navbar-toggler"
         type="button"
@@ -16,7 +17,7 @@ const Navbar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span className="logo navbar-toggler-icon"></span>
       </button>
 
       <div className="collapse navbar-collapse" id="navbarColor03">
@@ -31,15 +32,17 @@ const Navbar = () => {
               Play Date
             </Link>
           </li>
+          <li className="nav-item active">
+            <a className="nav-link" href="/hang">
+              Hang with a pup
+            </a>
+          </li>
           <li className="nav-item">
             <Link to="/about" className="nav-link nav-item navbar-brand">
               About
             </Link>
           </li>
         </ul>
-        <form className="form-inline my-2 my-lg-0">
-          
-        </form>
       </div>
     </nav>
   );

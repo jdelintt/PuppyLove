@@ -10,6 +10,7 @@ import slide03 from "../../Images/slide03.jpg";
 import slide04 from "../../Images/slide04.jpg";
 import slide05 from "../../Images/slide05.jpg";
 import Loading from "../../components/Loading/Loading";
+import "./App.css";
 
 
 
@@ -29,7 +30,8 @@ function User() {
     
     
     return (
-    
+        <>
+        
     <div style={{width: '100%', height: '100%'}}>
         {isLoading && <Loading/>}
         {!isLoading && <Container style={{ maxWidth: "2000px" }}>
@@ -68,6 +70,7 @@ function User() {
         </Container>}
 
     </div>
+    </>
     
 
 

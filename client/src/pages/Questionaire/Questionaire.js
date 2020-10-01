@@ -14,7 +14,7 @@ export default () => {
   });
 
   //data
-  const [breedData, setBreed] = useState();
+  const [breedData, setBreed] = useState([]);
 
   const [APIdata, setData] = useState({
     breed: "",
@@ -26,15 +26,17 @@ export default () => {
     allergies: "",
   });
 
-  // useEffect(() => {
-  //   getBreedList();
-  // }, []);
+  useEffect(() => {
+    getBreedList();
+  }, []);
 
-  // function getBreedList() {
-  //   API.getBreed()
-  //     .then((res) => setBreed(res))
-  //     .catch((err) => console.log(err));
-  // }
+  function getBreedList() {
+    API.getBaseBreedsList()
+      .then((res) => setBreed({ breeds: res.data.message }))
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }
+  console.log(breedData);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -44,10 +46,10 @@ export default () => {
   //event.target.checked
   const handleInputChange = ({ target: { name, value } }) =>
     setPrefs({ ...prefs, [name]: value });
-  console.log(prefs);
+  // console.log(prefs);
 
   // if (!breedData) return <h1>Loading...</h1>;
-  console.log(breedData);
+
   return (
     <>
       <h1 className="mt-3 mb-5" style={{ textAlign: "center" }}>
@@ -57,7 +59,7 @@ export default () => {
         <form>
           <div class="form-group">
             {/* from Brian's code */}
-            {/* <input
+            <input
               value={setData.breed}
               onChange={handleInputChange}
               name="breed"
@@ -67,12 +69,14 @@ export default () => {
               placeholder="Type in a dog breed to begin"
               id="breed"
             />
-            <datalist id="breeds"> */}
-            {/* {breedData.breeds.map((breed) => (
+            {/* <datalist id="breeds">
+              {breedData.map((breed) => (
                 <option value={breed} key={breed} />
-              ))} */}
-            {/* </datalist> */}
-            <label for="breedInput">Select Breed</label>
+              ))}
+            </datalist> */}
+
+            {/* from Aragon */}
+            {/* <label for="breedInput">Select Breed</label>
             <datalist
               name="breed"
               value={setData.breed}
@@ -84,7 +88,7 @@ export default () => {
               <option>German Shepherd</option>
               <option>Chihuahua</option>
               <option>Terrier</option>
-            </datalist>
+            </datalist> */}
           </div>
           <legend>Gender</legend>
           <div className="form-group">

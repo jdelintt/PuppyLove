@@ -1,9 +1,22 @@
 import React, { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import { Image, Modal, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw, faDog } from "@fortawesome/free-solid-svg-icons";
 import API from "../../utils/API";
-// import Modal from "../../components/Modal";
+import CardBody from "../../components/Card/CardBody.js";
+import CustomInput from '../../components/CustomInput/CustomInput.js';
+import Card1 from "../../components/Card/Card.js";
+import CardHeader from "../../components/Card/CardHeader.js";
+import cardsStyle from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
+import CardFooter from "../../components/Card/CardFooter.js";
+import imgCMS from "./imgCMS";
+
+
+const style = {
+  ...cardsStyle
+};
+const useStyles = makeStyles(style);
 
 const styles = {
   card: {
@@ -80,7 +93,7 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
   };
   
 
-  
+  const classes = useStyles();
   return (
     
 
@@ -91,10 +104,52 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
       <p>
         {dog.map(item => {
           return (
+            <div className = "row">
             <p key={item._id}>
-             <p>Name = {item.name}</p>
+              <Card1 profile style={{ maxWidth: "200px" }}>
+      <CardHeader image>
+        <a href="#pablo" onClick={e => e.preventDefault()}>
+          <img
+           src = {imgCMS[item.imagePath]}
+            alt="..."
+          />
+        </a>
+        <div
+          className={classes.coloredShadow}
+          style={{
+            backgroundImage: `url(https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)`,
+            opacity: "1"
+          }}
+        />
+      </CardHeader>
+      <CardBody>
+        <h4 className={classes.cardTitle}>{item.name}</h4>
+        <h6 className={`${classes.cardCategory} ${classes.cardDescription}`}>
+          For Adoption!
+        </h6>
+        <CustomInput
+          labelText="Leave a comment!"
+          id="float"
+          formControlProps={{
+          fullWidth: true
+          }}
+        />
+      </CardBody>
+      <CardFooter profile className={classes.justifyContentCenter}>
+        <Button justIcon round color="twitter">
+          <i className="fab fa-twitter" />
+        </Button>
+        <Button justIcon round color="facebook">
+          <i className="fab fa-facebook" />
+        </Button>
+        <Button justIcon round color="google">
+          <i className="fab fa-google" />
+        </Button>
+      </CardFooter>
+    </Card1>
+             {/* <img src = {require(`../../assets/img/dogpics/${item.image}`)}/> */}
             </p>
-            
+            </div>
           );
         })}
       </p>

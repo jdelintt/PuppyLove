@@ -6,8 +6,12 @@ import UserPage from "./pages/UserPage/index";
 import Navbar from "./components/Nav/Nav";
 import "./App.css";
 import Footer from "./components/Footer";
+
 import Card from "./components/Card/index"
 import LoginPage from "./pages/Dashboard/LoginPage"
+
+import PuppyVideo from "./pages/PuppyVideo/PuppyVideo";
+
 
 function App() {
   return (
@@ -18,8 +22,13 @@ function App() {
         <Switch>
           <Route exact path="/" component={UserPage} />
           <Route exact path="/hang" component={Questionaire} />
+
           <Route exact path="/signup" component={LoginPage} />
           <Route exact path = "/userinfo" component = {Card}/>
+
+          <Route exact path="/signup" component={Dashboard} />
+          <Route exact path="/video" component={PuppyVideo} />
+
         </Switch>
        
         <Footer />

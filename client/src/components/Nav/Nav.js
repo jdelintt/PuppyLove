@@ -24,7 +24,7 @@ const Navbar = () => {
               Hang with a pup
             </a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a className="nav-link" href="#">
               Features
             </a>
@@ -33,15 +33,16 @@ const Navbar = () => {
             <a className="nav-link" href="#">
               Pricing
             </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <a className="nav-link" href="#">
               About
             </a>
           </li>
-          
+
+
         </ul>
-        <form className="form-inline my-2 my-lg-0">
+        {/* <form className="form-inline my-2 my-lg-0">
           <input
             className="form-control mr-sm-2"
             type="text"
@@ -50,7 +51,7 @@ const Navbar = () => {
           <button className="btn btn-secondary my-2 my-sm-0" type="submit">
             Search
           </button>
-        </form>
+        </form> */}
       </div>
     </nav>
   );

@@ -13,5 +13,13 @@ export default {
     axios.post("/api/userInfo", data);
   },
 
-  // this returns all of the dogs in the database
+  getRandomDog: function () {
+    return axios.get("https://dog.ceo/api/breeds/image/random");
+  },
+  getDogsOfBreed: function (breed) {
+    return axios.get("https://dog.ceo/api/breed/" + breed + "/images");
+  },
+  getBaseBreedsList: function () {
+    return axios.get("https://dog.ceo/api/breeds/list");
+  },
 };

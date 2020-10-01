@@ -37,13 +37,12 @@ function User() {
         {!isLoading && <Container style={{ maxWidth: "2000px" }}>
             
             <Row>
-                <Col size="md-4">
+                <Col size="md-4 sm-12">
                     <Card setLoading={setLoadingState} header="My Recent Pups" link1="https://i.pinimg.com/originals/e6/3d/2c/e63d2c80d0603f41f9455a5389694fae.jpg" link2="https://pyxis.nymag.com/v1/imgs/1fa/1b2/4ae76fa8c9910485045e4f9a956345903b-18-puppy-dog-eyes.rsquare.w1200.jpg" isFirstCard={true}/>
 
-                    
                 </Col>
-                <Col size="md-4">
-                    <Carousel>
+                <Col size="md-4 sm-12">
+                    <Carousel style={{margin:"auto"}}>
                         <Carousel.Item>
                             <img src={slide01} alt="chubby dog"/>
                         </Carousel.Item>
@@ -62,7 +61,7 @@ function User() {
                     </Carousel>
 
                 </Col>
-                <Col size="md-4">
+                <Col size="md-4 sm-12">
                     <Card setLoading={setLoadingState} header="Dogs In My Area" link1="https://i.pinimg.com/originals/e6/3d/2c/e63d2c80d0603f41f9455a5389694fae.jpg" link2="https://pyxis.nymag.com/v1/imgs/1fa/1b2/4ae76fa8c9910485045e4f9a956345903b-18-puppy-dog-eyes.rsquare.w1200.jpg" isFirstCard={false}/>
                 </Col>
 

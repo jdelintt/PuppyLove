@@ -14,7 +14,7 @@ export default () => {
   });
 
   //data
-  const [breedData, setBreed] = useState();
+  const [breedData, setBreed] = useState([]);
 
   const [APIdata, setData] = useState({
     breed: "",
@@ -22,19 +22,23 @@ export default () => {
     femalePref: "",
     size: "",
     age: "",
-    energyLevel: "",
-    allergies: "",
+    energyLevel: energyLevels[prefs.energy],
+    allergies: allergies[prefs.allergies],
   });
 
-  // useEffect(() => {
-  //   getBreedList();
-  // }, []);
+  console.log(APIdata);
 
-  // function getBreedList() {
-  //   API.getBreed()
-  //     .then((res) => setBreed(res))
-  //     .catch((err) => console.log(err));
-  // }
+  useEffect(() => {
+    getBreedList();
+  }, []);
+
+  function getBreedList() {
+    API.getBaseBreedsList()
+      .then((res) => setBreed({ breeds: res.data.message }))
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }
+  console.log(breedData);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -42,12 +46,14 @@ export default () => {
     API.createPref(APIdata);
   };
   //event.target.checked
-  const handleInputChange = ({ target: { name, value } }) =>
+  const handleInputChange = ({ target: { name, value } }) => {
     setPrefs({ ...prefs, [name]: value });
-  console.log(prefs);
+    setData({ ...APIdata, [name]: value });
+  };
+  // console.log(prefs);
 
   // if (!breedData) return <h1>Loading...</h1>;
-  console.log(breedData);
+
   return (
     <>
       <h1 className="mt-3 mb-5" style={{ textAlign: "center" }}>
@@ -57,8 +63,8 @@ export default () => {
         <form>
           <div class="form-group">
             {/* from Brian's code */}
-            {/* <input
-              value={setData.breed}
+            <input
+              // value={setData.breed}
               onChange={handleInputChange}
               name="breed"
               list="breeds"
@@ -67,12 +73,14 @@ export default () => {
               placeholder="Type in a dog breed to begin"
               id="breed"
             />
-            <datalist id="breeds"> */}
-            {/* {breedData.breeds.map((breed) => (
+            {/* <datalist id="breeds">
+              {breedData.map((breed) => (
                 <option value={breed} key={breed} />
-              ))} */}
-            {/* </datalist> */}
-            <label for="breedInput">Select Breed</label>
+              ))}
+            </datalist> */}
+
+            {/* from Aragon */}
+            {/* <label for="breedInput">Select Breed</label>
             <datalist
               name="breed"
               value={setData.breed}
@@ -84,17 +92,17 @@ export default () => {
               <option>German Shepherd</option>
               <option>Chihuahua</option>
               <option>Terrier</option>
-            </datalist>
+            </datalist> */}
           </div>
           <legend>Gender</legend>
           <div className="form-group">
             <div className="custom-control custom-checkbox">
               <input
-                name="gender"
+                name="malePref"
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck1"
-                value={setData.malePref}
+                // value={setData.malePref}
               />
               <label className="custom-control-label" for="customCheck1">
                 Male
@@ -102,11 +110,11 @@ export default () => {
             </div>
             <div className="custom-control custom-checkbox">
               <input
-                name="gender"
+                name="femalePref"
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck2"
-                value={setData.femalePref}
+                // value={setData.femalePref}
               />
               <label className="custom-control-label" for="customCheck2">
                 Female
@@ -140,14 +148,14 @@ export default () => {
               type="range"
               className="custom-range"
               id="ageSlide"
-              value={setData.age}
+              // value={setData.age}
             />
           </div>
           <div className="sliders">
             <legend>Energy Level</legend>
             <label for="energySlide">{energyLevels[prefs.energy]}</label>
             <input
-              name="energy"
+              name="energyLevel"
               defaultValue="0"
               onChange={handleInputChange}
               min="0"
@@ -173,6 +181,7 @@ export default () => {
               value={setData.allergies}
             />
           </div>
+
           <button
             type="submit"
             onClick={handleSubmit}

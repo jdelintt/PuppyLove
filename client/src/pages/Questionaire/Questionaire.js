@@ -22,9 +22,11 @@ export default () => {
     femalePref: "",
     size: "",
     age: "",
-    energyLevel: "",
-    allergies: "",
+    energyLevel: energyLevels[prefs.energy],
+    allergies: allergies[prefs.allergies],
   });
+
+  console.log(APIdata);
 
   useEffect(() => {
     getBreedList();
@@ -44,8 +46,10 @@ export default () => {
     API.createPref(APIdata);
   };
   //event.target.checked
-  const handleInputChange = ({ target: { name, value } }) =>
+  const handleInputChange = ({ target: { name, value } }) => {
     setPrefs({ ...prefs, [name]: value });
+    setData({ ...APIdata, [name]: value });
+  };
   // console.log(prefs);
 
   // if (!breedData) return <h1>Loading...</h1>;
@@ -60,7 +64,7 @@ export default () => {
           <div class="form-group">
             {/* from Brian's code */}
             <input
-              value={setData.breed}
+              // value={setData.breed}
               onChange={handleInputChange}
               name="breed"
               list="breeds"
@@ -94,11 +98,11 @@ export default () => {
           <div className="form-group">
             <div className="custom-control custom-checkbox">
               <input
-                name="gender"
+                name="malePref"
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck1"
-                value={setData.malePref}
+                // value={setData.malePref}
               />
               <label className="custom-control-label" for="customCheck1">
                 Male
@@ -106,11 +110,11 @@ export default () => {
             </div>
             <div className="custom-control custom-checkbox">
               <input
-                name="gender"
+                name="femalePref"
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck2"
-                value={setData.femalePref}
+                // value={setData.femalePref}
               />
               <label className="custom-control-label" for="customCheck2">
                 Female
@@ -144,14 +148,14 @@ export default () => {
               type="range"
               className="custom-range"
               id="ageSlide"
-              value={setData.age}
+              // value={setData.age}
             />
           </div>
           <div className="sliders">
             <legend>Energy Level</legend>
             <label for="energySlide">{energyLevels[prefs.energy]}</label>
             <input
-              name="energy"
+              name="energyLevel"
               defaultValue="0"
               onChange={handleInputChange}
               min="0"

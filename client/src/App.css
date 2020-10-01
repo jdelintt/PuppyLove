@@ -1,12 +1,22 @@
+body, html {
+  height: 100%;
+}
+
+.logo {
+  background-image: url(./Images/PuppyLoveLogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
 #bgOverlay {
-  background-image: url('https://www.tokkoro.com/picsup/3076475-black-mouth-cur_cute_dog_rescue-dog.jpg');
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5e8884a5837d295cd6a0f1c9/1586069553465-R5NHSMIB35BO3BTPL2IP/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/vuedog_pet_photogaphy_andrew_sproule_cocker_spaniel_dorset.jpg?format=2500w');
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.7;
-  position: absolute;
+  background-position: center;
   height: 100vh;
-  width: 100vw;
-  top:0;
+  width: 100%;
   z-index: -1;
 }
 

@@ -78,8 +78,30 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
         console.error(error);
       });
   };
+  
+
+  
   return (
+    
+
+
     <div className="card text-center">
+      <div>
+    {dog.length ? (
+      <p>
+        {dog.map(item => {
+          return (
+            <p key={item._id}>
+             <p>Name = {item.name}</p>
+            </p>
+            
+          );
+        })}
+      </p>
+    ) : (
+      <h3>No Results to Display</h3>
+    )}
+    </div>
       <button onClick={mockAPI}>Mock API Call</button>
       <div style={styles.header} className="card-header">
         {header}
@@ -87,6 +109,7 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
       </div>
       <div className="card-body">
         <Image
+        
           style={!isFirstCard ? styles.image2 : styles.image}
           src={link1}
           width="200px"

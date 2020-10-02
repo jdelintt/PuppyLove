@@ -29,17 +29,30 @@ module.exports = {
   //saves user pref
   create: function (req, res) {
     //breed, malepref, femalepref, size, age, energylevel, allergies
-    console.log(req.body);
+    // console.log(req.body);
 
     //console logs breed
-    console.log(req.body.breed);
+    // console.log(req.body.breed);
     // console.log(db.UserInfo);
     db.UserInfo.create(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   update: function (req, res) {
-    db.UserInfo.findOneAndUpdate({ _id: req.params.id }, req.body)
+    db.UserInfo.findOneAndUpdate(
+      { _id: req.params.id },
+      {
+        $set: {
+          breed: req.body.breed,
+          malePref: req.body.malePref,
+          femalePref: req.body.femalePref,
+          size: req.body.size,
+          age: req.body.age,
+          energylevel: req.body.energylevel,
+          allergies: req.body.allergies,
+        },
+      }
+    )
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },

@@ -12,6 +12,8 @@ const dogSeed = [
     age: 9,
     energyLevel: 8,
     imagePath: "German.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Fred",
@@ -19,6 +21,8 @@ const dogSeed = [
     age: 5,
     energyLevel: 5,
     imagePath: "Shar_Pei.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "James",
@@ -26,6 +30,8 @@ const dogSeed = [
     age: 4,
     energyLevel: 9,
     imagePath: "Border_Collie.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Freddy",
@@ -33,6 +39,8 @@ const dogSeed = [
     age: 2,
     energyLevel: 7,
     imagePath: "Dachshund.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Happy",
@@ -40,6 +48,8 @@ const dogSeed = [
     age: 4,
     energyLevel: 10,
     imagePath: "Labradoodle.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Morgan",
@@ -47,6 +57,8 @@ const dogSeed = [
     age: 5,
     energyLevel: 2,
     imagePath: "Pitbull_Morgan.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "James",
@@ -54,6 +66,8 @@ const dogSeed = [
     age: 1,
     energyLevel: 9,
     imagePath: "Border_Collie.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Lilly",
@@ -61,6 +75,8 @@ const dogSeed = [
     age: 3,
     energyLevel: 6,
     imagePath: "BullTerrier.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Codsworth",
@@ -68,6 +84,8 @@ const dogSeed = [
     age: 3,
     energyLevel: 8,
     imagePath: "Sheepdog",
+    allergies,
+    comments: [],
   },
   {
     name: "Emilio",
@@ -75,6 +93,8 @@ const dogSeed = [
     age: 2,
     energyLevel: 6,
     imagePath: "Border_Collie_Emilio.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Mr. Snuggles",
@@ -82,6 +102,8 @@ const dogSeed = [
     age: 7,
     energyLevel: 4,
     imagePath: "Labrador.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Mrs. Snuggles",
@@ -89,6 +111,8 @@ const dogSeed = [
     age: 3,
     energyLevel: 6,
     imagePath: "Shar_Pei_Snuggles.png",
+    allergies,
+    comments: [],
   },
   {
     name: "Beebee",
@@ -96,6 +120,8 @@ const dogSeed = [
     age: 1,
     energyLevel: 5,
     imagePath: "TerrierMixed.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Cacahuate",
@@ -103,6 +129,8 @@ const dogSeed = [
     age: 3,
     energyLevel: 4,
     imagePath: "Chihuahua",
+    allergies,
+    comments: [],
   },
   {
     name: "Frank",
@@ -110,6 +138,8 @@ const dogSeed = [
     age: 7,
     energyLevel: 4,
     imagePath: "BullDog.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Alejandro",
@@ -117,6 +147,8 @@ const dogSeed = [
     age: 6,
     energyLevel: 3,
     imagePath: "Maltese.jpg",
+    allergies,
+    comments: [],
   },
   {
     name: "Melvin",
@@ -124,6 +156,8 @@ const dogSeed = [
     age: 6,
     energyLevel: 8,
     imagePath: "Dalmatian.jpg",
+    allergies,
+    comments: [],
   },
 ];
 

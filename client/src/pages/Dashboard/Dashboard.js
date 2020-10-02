@@ -2,16 +2,24 @@ import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import Container from "../../components/Container";
 import { Animated } from "react-animated-css";
+import API from "../../utils/API";
 
 function Signup() {
   const [info, setInfo] = useState({
-    id: "",
-    pass: "",
+    username: "",
+    password: "",
   });
 
   const handleInput = ({ target: { name, value } }) => {
     setInfo({ ...info, [name]: value });
     console.log(info);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    API.CreateNewUser(info).then((res) => {
+      // localstorage set username and user can have access to it throughotu the pge
+    });
   };
 
   return (
@@ -28,7 +36,7 @@ function Signup() {
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
-            name="id"
+            name="username"
             onChange={handleInput}
             type="email"
             placeholder="Enter email"
@@ -41,7 +49,7 @@ function Signup() {
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            name="pass"
+            name="password"
             onChange={handleInput}
             type="password"
             placeholder="Password"
@@ -50,7 +58,7 @@ function Signup() {
         <Button variant="primary" type="submit">
           Login
         </Button>
-        <Button variant="primary" type="submit">
+        <Button onClick={handleSubmit} variant="primary" type="submit">
           Sign up
         </Button>
       </Form>

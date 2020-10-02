@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-info bg-info">
-      <Link to="/">
-        <a className="navbar-brand">Puppy Love</a>
-      </Link>
-
+    <nav className="navbar navbar-expand-lg navbar-info bg-info logo">
       <button
         className="navbar-toggler"
         type="button"
@@ -17,7 +13,7 @@ const Navbar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="logo navbar-toggler-icon"></span>
+        <span className=" navbar-toggler-icon"></span>
       </button>
 
       <div className="collapse navbar-collapse" id="navbarColor03">

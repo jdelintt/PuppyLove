@@ -16,6 +16,7 @@ import PuppyVideo from "./pages/PuppyVideo/PuppyVideo";
 import Card2 from "./components/Card/UserDogs"
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage"
 import LandingPage from "./pages/LandingPage/LandingPage"
+import Dogsfill from "./pages/UserPage/Userlist";
 
 function App() {
   return (
@@ -25,17 +26,19 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path = "/landingpage" component = {LandingPage}/>
-          <Route exact path="/about" component={About}/>
+          {/* <Route exact path="/about" component={About}/> */}
           <Route exact path="/" component={UserPage} />
           <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />
 
-          <Route exact path="/signup" component={LoginPage} />
+          <Route exact path="/login" component={LoginPage} />
           <Route exact path = "/userinfo" component = {Card}/>
 
           <Route exact path="/signup" component={Dashboard} />
           <Route exact path="/video" component={PuppyVideo} />
-          <Route exact path="/UserDogs" component={AboutUsPage}/>
+          <Route exact path="/about" component={AboutUsPage}/>
+          
+          <Route exact path = "/userLIst" component = {Dogsfill}/>
 
         </Switch>
        

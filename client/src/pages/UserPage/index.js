@@ -28,6 +28,7 @@ export default function CardExampleCardProfile() {
        <CardExampleCardRotating />
     <div className = "row ">
       <div className = "col-md-3">
+    <h1>Dogs You've Interacted With:</h1>
     <Card profile style={{ maxWidth: "200px" }}>
       <CardHeader image>
         <a href="#pablo" onClick={e => e.preventDefault()}>

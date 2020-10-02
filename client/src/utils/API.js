@@ -8,6 +8,9 @@ export default {
   getDogs: function () {
     return axios.get("/api/userinfo");
   },
+  getCurrentUser(id) {
+    return axios.get("/api/userdata/" + id);
+  },
 
   createPref: function (data) {
     axios.post("/api/userinfo", data);

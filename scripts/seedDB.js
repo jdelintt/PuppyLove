@@ -162,8 +162,8 @@ const dogSeed = [
 ];
 
 // console.log(db.userInfo);
-db.UserInfo.deleteOne({})
-  .then(() => db.UserInfo.collection.insertMany(dogSeed))
+db.DogStatic.deleteOne({})
+  .then(() => db.DogStatic.collection.insertMany(dogSeed))
   .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

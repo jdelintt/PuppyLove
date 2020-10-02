@@ -14,19 +14,19 @@ import cardsStyle from "../../assets/jss/material-kit-pro-react/views/components
 import InfoArea from "../../components/InfoArea/InfoArea.js";
 import Timeline from "@material-ui/icons/Timeline";
 import Grid from "@material-ui/core/Grid";
-import UserDogsFilter from "../../components/Userfilter/UserDogsFilter";
+// import UserDogsFilter from "../../components/Userfilter/UserDogsFilter";
 const style = {
   ...cardsStyle,
 };
 
 const useStyles = makeStyles(style);
 
-export default function CardExampleCardProfile() {
+export default function CardExampleCardProfile({ user }) {
   const classes = useStyles();
   return (
     <>
       <CardExampleCardRotating />
-
+      <h1>WELCOME TO PUPPY LOVE {user?.username || ""}!</h1>
       <div className="row ">
         <div className="col-md-3">
           <h1>Dogs You've Interacted With:</h1>
@@ -208,7 +208,7 @@ export default function CardExampleCardProfile() {
               </Button>
             </CardFooter>
           </Card>
-          <UserDogsFilter />
+          {/* <UserDogsFilter /> */}
         </div>
       </div>
     </>

@@ -21,7 +21,7 @@ function Signup({ setUser }) {
       // localstorage set username and user can have access to it throughotu the pge
       localStorage.setItem("id", JSON.stringify(data._id));
       setUser(data);
-      window.location.replace("/landingpage");
+      window.location.replace("/userpage");
     });
   };
 

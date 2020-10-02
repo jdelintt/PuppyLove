@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Questionaire from "./pages/Questionaire/Questionaire";
@@ -14,20 +14,23 @@ import LoginPage from "./pages/Dashboard/LoginPage";
 
 import PuppyVideo from "./pages/PuppyVideo/PuppyVideo";
 
-import Card2 from "./components/Card/UserDogs"
-import AboutUsPage from "./pages/AboutUsPage/AboutUsPage"
-import LandingPage from "./pages/LandingPage/LandingPage"
-
+// import Card2 from "./components/Card/UserDogs"
+import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <>
       <Router>
         <Navbar />
         <Switch>
-
-          <Route exact path = "/landingpage" component = {LandingPage}/>
-          <Route exact path="/about" component={About}/>
+          <Route
+            exact
+            path="/landingpage"
+            component={() => <LandingPage user={user} />}
+          />
+          <Route exact path="/about" component={About} />
 
           <Route exact path="/" component={UserPage} />
           <Route exact path="/background" component={BackgroundCheck} />
@@ -36,11 +39,14 @@ function App() {
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/userinfo" component={Card} />
 
-          <Route exact path="/signup" component={Dashboard} />
+          <Route
+            exact
+            path="/signup"
+            component={() => <Dashboard setUser={setUser} />}
+          />
           <Route exact path="/video" component={PuppyVideo} />
 
-          <Route exact path="/UserDogs" component={AboutUsPage}/>
-
+          <Route exact path="/UserDogs" component={AboutUsPage} />
         </Switch>
 
         <Footer />

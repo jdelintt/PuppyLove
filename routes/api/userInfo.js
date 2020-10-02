@@ -14,27 +14,6 @@ router
   .put(unserInfoController.update)
   .delete(unserInfoController.remove);
 
-module.exports = router;
 
-//dummydata
-// { "userinfo": {
-//   "credidentails": {
-//     "id": "Andrew",
-//     "password": "passowrd123"
-//   },
-//   "name": "Andrew"
-// },
-// "name": "Andrew",
-// "breed": "Shiba",
-// "size": 123,
-// "age": 5,
-// "energyLevel": 3,
-// "history": {
-//   "dogs": []
-// },
-// "matchedDogs": {
-//   "dogs": []
-// },
-// "userBackgroundCheck": true,
-// "image": "url"
-// }
+
+module.exports = router;

@@ -25,10 +25,10 @@ function App() {
           <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />
 
-          <Route exact path="/signup" component={LoginPage} />
+          <Route exact path="/login" component={LoginPage} />
           <Route exact path="/userinfo" component={Card} />
 
-          <Route exact path="/signup2" component={Dashboard} />
+          <Route exact path="/signup" component={Dashboard} />
           <Route exact path="/video" component={PuppyVideo} />
         </Switch>
 

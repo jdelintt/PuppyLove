@@ -4,7 +4,7 @@ import Container from "../../components/Container";
 import { Animated } from "react-animated-css";
 import API from "../../utils/API";
 
-function Signup() {
+function Signup({ setUser }) {
   const [info, setInfo] = useState({
     username: "",
     password: "",
@@ -17,8 +17,11 @@ function Signup() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    API.CreateNewUser(info).then((res) => {
+    API.CreateNewUser(info).then(({ data }) => {
       // localstorage set username and user can have access to it throughotu the pge
+      localStorage.setItem("id", JSON.stringify(data._id));
+      setUser(data);
+      window.location.replace("/userpage");
     });
   };
 
@@ -28,8 +31,7 @@ function Signup() {
         animationIn="wobble"
         animationOut="fadeOut"
         animationInDuration={1000}
-        isVisible={true}
-      >
+        isVisible={true}>
         <h1>Puppy Love</h1>
       </Animated>
       <Form>

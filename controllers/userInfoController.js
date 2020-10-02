@@ -25,9 +25,15 @@ module.exports = {
   //     .then((dbModel) => res.json(dbModel))
   //     .catch((err) => res.status(422).json(err));
   // },
+
+  //saves user pref
   create: function (req, res) {
+    //breed, malepref, femalepref, size, age, energylevel, allergies
     console.log(req.body);
-    console.log(db.UserInfo);
+
+    //console logs breed
+    console.log(req.body.breed);
+    // console.log(db.UserInfo);
     db.UserInfo.create(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));

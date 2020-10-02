@@ -6,11 +6,11 @@ axios.get("api/userinfo", function (req, res) {});
 
 export default {
   getDogs: function () {
-    return axios.get("/api/userInfo");
+    return axios.get("/api/userinfo");
   },
 
   createPref: function (data) {
-    axios.post("/api/userInfo", data);
+    axios.post("/api/userinfo", data);
   },
 
   getRandomDog: function () {

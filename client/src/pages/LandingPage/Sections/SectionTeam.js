@@ -24,6 +24,7 @@ import teamsStyle from "../../../assets/jss/material-kit-pro-react/views/compone
 import teamStyle from "../../../assets/jss/material-kit-pro-react/views/componentsSections/landingPageSections/teamStyle";
 
 const style = {
+  
   ...teamsStyle,
   ...teamStyle,
   justifyContentCenter: {
@@ -64,7 +65,7 @@ export default function SectionTeam() {
               </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Jesus DeLinntt</h4>
+              <h4 className={classes.cardTitle}>Jesus DeLintt</h4>
               <h6 className={classes.textMuted}>Puppy Player</h6>
               <p className={classes.cardDescription}>
                 I love dem pooches!
@@ -189,6 +190,37 @@ export default function SectionTeam() {
               <h6 className={classes.textMuted}>Puppy Player</h6>
               <p className={classes.cardDescription}>
                 Sometimes you just gotta say NO.
+              </p>
+            </CardBody>
+            <CardFooter className={classes.justifyContent}>
+              <Button href="#pablo" justIcon simple color="google">
+                <i className="fab fa-google" />
+              </Button>
+              <Button href="#pablo" justIcon simple color="twitter">
+                <i className="fab fa-twitter" />
+              </Button>
+              <Button href="#pablo" justIcon simple color="dribbble">
+                <i className="fab fa-dribbble" />
+              </Button>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem md={2} sm={2}>
+          <Card profile plain>
+            <CardAvatar profile plain>
+              <a href="#pablo">
+                <img
+                  src = "https://www.petguide.com/wp-content/uploads/2014/10/cutest-dog-breeds-main.jpg"
+                  alt="profile-pic"
+                  className={classes.img}
+                />
+              </a>
+            </CardAvatar>
+            <CardBody plain>
+              <h4 className={classes.cardTitle}>Anthony Figueroa</h4>
+              <h6 className={classes.textMuted}>Puppy Baller</h6>
+              <p className={classes.cardDescription}>
+                I'm definitely the cutest one.  Definitely.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>

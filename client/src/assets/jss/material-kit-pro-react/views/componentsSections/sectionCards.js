@@ -199,6 +199,10 @@ const styles = {
   },
   marginBottom20: {
     marginBottom: "20px"
+  },
+  buttonStyle: {
+    backgroundColor: "purple",
+    color: "white",
   }
 };
 

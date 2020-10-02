@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-info bg-info logo">
+    <nav className="navbar  navbar-info bg-info logo">
       <button
         className="navbar-toggler"
         type="button"
@@ -28,7 +28,7 @@ const Navbar = () => {
               Play Date
             </Link>
           </li>
-          <li className="nav-item active">
+          <li className="nav-item">
             <a className="nav-link" href="/hang">
               Hang with a pup
             </a>

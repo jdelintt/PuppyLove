@@ -30,6 +30,7 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.10.7",
+    "react-multi-carousel": "^2.5.5",
     "react-slick": "^0.27.11",
     "slick-carousel": "^1.8.1"
   },

@@ -8,15 +8,15 @@ import "./App.css";
 import Footer from "./components/Footer";
 import BackgroundCheck from "./pages/BackgroundCheck/BackgroundCheck";
 import About from "./pages/About/About";
+import CardExampleCardProfile from "../src/pages/UserPage/index";
 
 import Card from "./components/Card/index";
 import LoginPage from "./pages/Dashboard/LoginPage";
 
 import PuppyVideo from "./pages/PuppyVideo/PuppyVideo";
-
-// import Card2 from "./components/Card/UserDogs"
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import Dogsfill from "./pages/UserPage/Userlist";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -25,14 +25,9 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route
-            exact
-            path="/landingpage"
-            component={() => <LandingPage user={user} />}
-          />
-          <Route exact path="/about" component={About} />
-
-          <Route exact path="/" component={UserPage} />
+          <Route exact path="/landingpage" component={LandingPage} />
+          {/* <Route exact path="/about" component={About}/> */}
+          <Route exact path="/UserPage" component={UserPage} />
           <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />
 
@@ -45,8 +40,10 @@ function App() {
             component={() => <Dashboard setUser={setUser} />}
           />
           <Route exact path="/video" component={PuppyVideo} />
+          <Route exact path="/about" component={AboutUsPage} />
 
-          <Route exact path="/UserDogs" component={AboutUsPage} />
+          <Route exact path="/userLIst" component={Dogsfill} />
+          <Route exact path="/user" component={CardExampleCardProfile} />
         </Switch>
 
         <Footer />

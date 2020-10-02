@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Image, Modal, Button } from "react-bootstrap";
+import { Image, Modal, Button, Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw, faDog } from "@fortawesome/free-solid-svg-icons";
 import API from "../../utils/API";
@@ -95,141 +95,66 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
 
   const classes = useStyles();
   return (
-    
 
-
-    <div className="card text-center">
+      <div className="card text-center">
       <div>
     {dog.length ? (
       <p>
         {dog.map(item => {
           return (
-            <div className = "row">
-            <p key={item._id}>
-              <Card1 profile style={{ maxWidth: "200px" }}>
-      <CardHeader image>
-        <a href="#pablo" onClick={e => e.preventDefault()}>
-          <img
-           src = {imgCMS[item.imagePath]}
-            alt="..."
-          />
-        </a>
-        <div
-          className={classes.coloredShadow}
-          style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)`,
-            opacity: "1"
-          }}
-        />
-      </CardHeader>
-      <CardBody>
-        <h4 className={classes.cardTitle}>{item.name}</h4>
-        <h6 className={`${classes.cardCategory} ${classes.cardDescription}`}>
-          For Adoption!
-        </h6>
-        <CustomInput
-          labelText="Leave a comment!"
-          id="float"
-          formControlProps={{
-          fullWidth: true
-          }}
-        />
-      </CardBody>
-      <CardFooter profile className={classes.justifyContentCenter}>
-        <Button justIcon round color="twitter">
-          <i className="fab fa-twitter" />
-        </Button>
-        <Button justIcon round color="facebook">
-          <i className="fab fa-facebook" />
-        </Button>
-        <Button justIcon round color="google">
-          <i className="fab fa-google" />
-        </Button>
-      </CardFooter>
-    </Card1>
-             {/* <img src = {require(`../../assets/img/dogpics/${item.image}`)}/> */}
-            </p>
-            </div>
-          );
+            <div>
+              
+              <p key={item._id}>
+                <Card1 profile style={{ maxWidth: "200px" }}>
+                  <CardHeader image>
+                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img
+                              src = {imgCMS[item.imagePath]}
+                              alt="..."
+                          />
+                      </a>
+                  <div
+                      className={classes.coloredShadow}
+                      style={{
+                      backgroundImage: `url(https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)`,
+                      opacity: "1"
+                      }}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <h4 className={classes.cardTitle}>{item.name}</h4>
+                    <h6 className={`${classes.cardCategory} ${classes.cardDescription}`}>
+                    For Adoption!
+                    </h6>
+                    <CustomInput
+                      labelText="Leave a comment!"
+                      id="float"
+                      formControlProps={{
+                      fullWidth: true
+                      }}
+                    />
+                  </CardBody>
+                  
+                </Card1>
+                    {/* <img src = {require(`../../assets/img/dogpics/${item.image}`)}/> */}
+                    
+        </p>
+                </div>
+           );
         })}
       </p>
     ) : (
       <h3>No Results to Display</h3>
     )}
     </div>
-      <button onClick={mockAPI}>Mock API Call</button>
-      <div style={styles.header} className="card-header">
-        {header}
-        <FontAwesomeIcon icon={faDog}></FontAwesomeIcon>
-      </div>
-      <div className="card-body">
-        <Image
-        
-          style={!isFirstCard ? styles.image2 : styles.image}
-          src={link1}
-          width="200px"
-          height="200px"
-          roundedCircle
-        />
-        <Button variant="outline-primary" onClick={handleShow}>
-          Comment
-        </Button>
+    
+      
 
-        <Modal show={show} onHide={handleClose} animation={false}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
-        <br></br>
-        <Image
-          style={!isFirstCard ? styles.image2 : styles.image}
-          src={link2}
-          width="200px"
-          height="200px"
-          roundedCircle
-        />
-        {/* <h5 style={styles.card}className="card-title">{cardText[header]}</h5> */}
-
-        <Button variant="outline-primary" onClick={handleShow}>
-          Comment
-        </Button>
-
-        <Modal show={show} onHide={handleClose} animation={false}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
-        <br></br>
-        <br></br>
-
-        <a href="/#" className="btn btn-primary">
-          See more pups
-        </a>
-      </div>
-
-      <div className="card-footer text-muted">
-        <FontAwesomeIcon icon={faPaw} />
-      </div>
+      
     </div>
+
   );
+  
 }
 
 export default Card;

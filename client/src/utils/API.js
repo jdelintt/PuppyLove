@@ -11,6 +11,14 @@ export default {
     axios.post("/api/userinfo", data);
   },
 
+  createPref: function (data) {
+    axios.post("/api/userinfo/:dogid", data);
+  },
+
+  requestData: function () {
+    axios.get("/api/userinfo/:id");
+  },
+
   getRandomDog: function () {
     return axios.get("https://dog.ceo/api/breeds/image/random");
   },

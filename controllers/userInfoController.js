@@ -43,6 +43,7 @@ module.exports = {
       { _id: req.params.id },
       {
         $set: {
+          userinfo: req.body.user,
           breed: req.body.breed,
           malePref: req.body.malePref,
           femalePref: req.body.femalePref,

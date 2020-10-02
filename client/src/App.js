@@ -5,12 +5,12 @@ import Questionaire from "./pages/Questionaire/Questionaire";
 import UserPage from "./pages/UserPage/index";
 import Navbar from "./components/Nav/Nav";
 import "./App.css";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 import BackgroundCheck from "./pages/BackgroundCheck/BackgroundCheck";
-import About from "./pages/About/About"
+import About from "./pages/About/About";
 
-import Card from "./components/Card/index"
-import LoginPage from "./pages/Dashboard/LoginPage"
+import Card from "./components/Card/index";
+import LoginPage from "./pages/Dashboard/LoginPage";
 
 import PuppyVideo from "./pages/PuppyVideo/PuppyVideo";
 import Card2 from "./components/Card/UserDogs"
@@ -22,12 +22,11 @@ function App() {
   return (
     <>
       <Router>
-        
         <Navbar />
         <Switch>
           <Route exact path = "/landingpage" component = {LandingPage}/>
           {/* <Route exact path="/about" component={About}/> */}
-          <Route exact path="/" component={UserPage} />
+          <Route exact path="/UserPage" component={UserPage} />
           <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />
 
@@ -41,7 +40,7 @@ function App() {
           <Route exact path = "/userLIst" component = {Dogsfill}/>
 
         </Switch>
-       
+
         <Footer />
         {/* style={{ position: absolute, bottom: 10 }} */}
       </Router>

@@ -33,19 +33,19 @@ export default function CardExampleCardRotating() {
       var rotatingCard = rotatingCards[i];
       var cardFront = rotatingCard.getElementsByClassName(classes.front)[0];
       var cardBack = rotatingCard.getElementsByClassName(classes.back)[0];
-      cardFront.style.height = "unset";
-      cardFront.style.width = "unset";
-      cardBack.style.height = "unset";
-      cardBack.style.width = "unset";
+      cardFront.style.height = "30px";
+      cardFront.style.width = "30px";
+      cardBack.style.height = "30px";
+      cardBack.style.width = "30px";
       var rotatingWrapper = rotatingCard.parentElement;
       var cardWidth = rotatingCard.parentElement.offsetWidth;
       var cardHeight = rotatingCard.children[0].children[0].offsetHeight;
       rotatingWrapper.style.height = cardHeight + "px";
       rotatingWrapper.style["margin-bottom"] = 30 + "px";
-      cardFront.style.height = "unset";
-      cardFront.style.width = "unset";
-      cardBack.style.height = "unset";
-      cardBack.style.width = "unset";
+      cardFront.style.height = "30px";
+      cardFront.style.width = "30px";
+      cardBack.style.height = "30px";
+      cardBack.style.width = "30px";
       cardFront.style.height = cardHeight + 35 + "px";
       cardFront.style.width = cardWidth + "px";
       cardBack.style.height = cardHeight + 35 + "px";
@@ -54,7 +54,7 @@ export default function CardExampleCardRotating() {
   };
   const classes = useStyles();
   return (
-    <GridContainer>
+    <GridContainer justify="center">
       <GridItem xs={12} sm={12} md={8} lg={6}>
         <div className={classes.rotatingCardContainer}>
           <Card background className={classes.cardRotate}>

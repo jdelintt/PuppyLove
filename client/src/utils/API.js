@@ -1,8 +1,10 @@
-// const router = require("express").Router();
-// const petInfoController = require("../../controllers/");
 var axios = require("axios");
 
 export default {
+  CreateNewUser: function (data) {
+    return axios.post("/api/createuser", data);
+  },
+
   getDogs: function () {
     return axios.get("/api/userinfo");
   },

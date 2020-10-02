@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const userInfoRoutes = require("./userInfo");
-// const petfinderRoutes = require("./petfinder");
+const createUser = require("./newUser");
 
-// Book routes
 router.use("/userinfo", userInfoRoutes);
-// router.use("/petfinder", petfinderRoutes);
+
+router.use("/createuser", createUser);
 
 module.exports = router;

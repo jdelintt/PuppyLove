@@ -35,6 +35,6 @@ UserCredentials.methods.comparePassword = function (candidatePassword, cb) {
   });
 };
 
-const UserSchema = mongoose.model("Cred", UserCredentials);
+const UserSchema = mongoose.model("UserCredentials", UserCredentials);
 
 module.exports = UserSchema;

@@ -10,10 +10,11 @@ import german from "../../assets/img/dogpics/German.jpg";
 import labradoodle from "../../assets/img/dogpics/Labradoodle.jpeg";
 import labrador from "../../assets/img/dogpics/Labrador.jpg";
 import maltese from "../../assets/img/dogpics/Maltese.jpg";
-// import pitbull_morgan from "../../assets/img/dogpics/PitBull_Morgan.jpg";
+import pitbull_morgan from "../../assets/img/dogpics/PitBull_Morgan.jpg";
 import shar_pei from "../../assets/img/dogpics/Shar_Pei.jpg";
 import sheepdog from "../../assets/img/dogpics/Sheepdog.jpg";
 import terriormixed from "../../assets/img/dogpics/TerrierMixed.jpeg";
+import jackrusselterrier from "../../assets/img/dogpics/Jack_Russell_Terrier_1.jpg";
 
 
  
@@ -22,6 +23,7 @@ import terriormixed from "../../assets/img/dogpics/TerrierMixed.jpeg";
 
 
 export default {
+    "Jack_Russell_Terrier_1.jpg": jackrusselterrier,
     "Shar_Pei_Snuggles.png": sharpee,
     "Border_Collie_Emilio.jpg": border_collie_emilio,
     "Border_Collie.jpg": border_collie,
@@ -34,7 +36,7 @@ export default {
     "Labradoodle.jpeg": labradoodle,
     "Labrador.jpg": labrador,
     "Maltese.jpg": maltese,
-    // "PitBull_Morgan.jpg": pitbull_morgan,
+    "PitBull_Morgan.jpg": pitbull_morgan,
     "Shar_Pei.jpg": shar_pei,
     "Sheepdog.jpg": sheepdog,
     "TerrierMixed.jpeg": terriormixed,

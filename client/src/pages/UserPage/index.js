@@ -13,7 +13,8 @@ import CardExampleCardRotating from "../Dashboard/index"
 import cardsStyle from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
 import InfoArea from "../../components/InfoArea/InfoArea.js";
 import Timeline from "@material-ui/icons/Timeline";
-
+import Grid from "@material-ui/core/Grid"
+import UserDogsFilter from "../../components/Userfilter/UserDogsFilter"
 const style = {
   ...cardsStyle
 };
@@ -25,9 +26,14 @@ export default function CardExampleCardProfile() {
   return (
     
     <>
+
        <CardExampleCardRotating />
+
+
+    
     <div className = "row ">
       <div className = "col-md-3">
+    <h1>Dogs You've Interacted With:</h1>
     <Card profile style={{ maxWidth: "200px" }}>
       <CardHeader image>
         <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -208,6 +214,7 @@ export default function CardExampleCardProfile() {
         </Button>
       </CardFooter>
     </Card>
+    <UserDogsFilter/>
     </div>
     </div>
     </>

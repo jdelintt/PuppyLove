@@ -2,8 +2,6 @@
 // const petInfoController = require("../../controllers/");
 var axios = require("axios");
 
-axios.get("api/userinfo", function (req, res) {});
-
 export default {
   getDogs: function () {
     return axios.get("/api/userinfo");

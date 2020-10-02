@@ -28,7 +28,7 @@ const Navbar = () => {
               Play Date
             </Link>
           </li>
-          <li className="nav-item active">
+          <li className="nav-item">
             <a className="nav-link" href="/hang">
               Hang with a pup
             </a>

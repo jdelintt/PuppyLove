@@ -14,13 +14,21 @@ import LoginPage from "./pages/Dashboard/LoginPage";
 
 import PuppyVideo from "./pages/PuppyVideo/PuppyVideo";
 
+import Card2 from "./components/Card/UserDogs"
+import AboutUsPage from "./pages/AboutUsPage/AboutUsPage"
+import LandingPage from "./pages/LandingPage/LandingPage"
+
+
 function App() {
   return (
     <>
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/about" component={About} />
+
+          <Route exact path = "/landingpage" component = {LandingPage}/>
+          <Route exact path="/about" component={About}/>
+
           <Route exact path="/" component={UserPage} />
           <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />
@@ -30,6 +38,9 @@ function App() {
 
           <Route exact path="/signup" component={Dashboard} />
           <Route exact path="/video" component={PuppyVideo} />
+
+          <Route exact path="/UserDogs" component={AboutUsPage}/>
+
         </Switch>
 
         <Footer />

@@ -8,23 +8,15 @@ import "./App.css";
 import Footer from "./components/Footer";
 import BackgroundCheck from "./pages/BackgroundCheck/BackgroundCheck";
 import About from "./pages/About/About";
+import CardExampleCardProfile from '../src/pages/UserPage/index'
 
 import Card from "./components/Card/index";
 import LoginPage from "./pages/Dashboard/LoginPage";
 
 import PuppyVideo from "./pages/PuppyVideo/PuppyVideo";
-<<<<<<< HEAD
-import Card2 from "./components/Card/UserDogs"
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage"
 import LandingPage from "./pages/LandingPage/LandingPage"
 import Dogsfill from "./pages/UserPage/Userlist";
-=======
-
-import Card2 from "./components/Card/UserDogs"
-import AboutUsPage from "./pages/AboutUsPage/AboutUsPage"
-import LandingPage from "./pages/LandingPage/LandingPage"
-
->>>>>>> 63572935c6dfb73a4458bed71023b9df14de09e9
 
 function App() {
   return (
@@ -32,17 +24,9 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-<<<<<<< HEAD
           <Route exact path = "/landingpage" component = {LandingPage}/>
           {/* <Route exact path="/about" component={About}/> */}
           <Route exact path="/UserPage" component={UserPage} />
-=======
-
-          <Route exact path = "/landingpage" component = {LandingPage}/>
-          <Route exact path="/about" component={About}/>
-
-          <Route exact path="/" component={UserPage} />
->>>>>>> 63572935c6dfb73a4458bed71023b9df14de09e9
           <Route exact path="/background" component={BackgroundCheck} />
           <Route exact path="/hang" component={Questionaire} />
 
@@ -51,14 +35,10 @@ function App() {
 
           <Route exact path="/signup" component={Dashboard} />
           <Route exact path="/video" component={PuppyVideo} />
-<<<<<<< HEAD
           <Route exact path="/about" component={AboutUsPage}/>
           
           <Route exact path = "/userLIst" component = {Dogsfill}/>
-=======
-
-          <Route exact path="/UserDogs" component={AboutUsPage}/>
->>>>>>> 63572935c6dfb73a4458bed71023b9df14de09e9
+          <Route exact path = "/user" component = {CardExampleCardProfile}/>
 
         </Switch>
 

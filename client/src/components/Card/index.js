@@ -134,17 +134,7 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
                       }}
                     />
                   </CardBody>
-                  <CardFooter profile className={classes.justifyContentCenter}>
-                  <Button justIcon round color="twitter">
-                    <i className="fab fa-twitter" />
-                  </Button>
-                  <Button justIcon round color="facebook">
-                     <i className="fab fa-facebook" />
-                  </Button>
-                  <Button justIcon round color="google">
-                    <i className="fab fa-google" />
-                  </Button>
-                  </CardFooter>
+                  
                 </Card1>
                     {/* <img src = {require(`../../assets/img/dogpics/${item.image}`)}/> */}
                     

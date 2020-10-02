@@ -14,6 +14,7 @@ import cardsStyle from "../../assets/jss/material-kit-pro-react/views/components
 import InfoArea from "../../components/InfoArea/InfoArea.js";
 import Timeline from "@material-ui/icons/Timeline";
 import Grid from "@material-ui/core/Grid"
+import UserDogsFilter from "../../components/Userfilter/UserDogsFilter"
 const style = {
   ...cardsStyle
 };
@@ -213,6 +214,7 @@ export default function CardExampleCardProfile() {
         </Button>
       </CardFooter>
     </Card>
+    <UserDogsFilter/>
     </div>
     </div>
     </>

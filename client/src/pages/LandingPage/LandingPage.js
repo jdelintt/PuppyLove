@@ -24,6 +24,7 @@ import landingPageStyle from "../../assets/jss/material-kit-pro-react/views/comp
 import SectionProduct from "./Sections/SectionProduct.js";
 import SectionTeam from "./Sections/SectionTeam.js";
 import SectionWork from "./Sections/SectionWork.js";
+import BackgroundVideo from "../../components/backgroundVideo/backgroundVideo"
 
 const useStyles = makeStyles(landingPageStyle);
 
@@ -35,13 +36,20 @@ export default function LandingPage({ user, ...rest }) {
   const classes = useStyles();
   return (
     <div>
+      
       <Parallax
-        image="https://images.squarespace-cdn.com/content/v1/5516c5b7e4b03ac54f20366d/1553273442353-W0RFRN1IOUXX4FPJOPNM/ke17ZwdGBToddI8pDm48kFmfxoboNKufWj-55Bgmc-J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iXS6XmVv7bUJ418E8Yoc1hjuviiiZmrL38w1ymUdqq4JaGeFUxjM-HeS7Oc-SSFcg/OtieTreat_-11.jpg"
-        filter="dark">
+      
+      image="https://images.squarespace-cdn.com/content/v1/5516c5b7e4b03ac54f20366d/1553273442353-W0RFRN1IOUXX4FPJOPNM/ke17ZwdGBToddI8pDm48kFmfxoboNKufWj-55Bgmc-J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iXS6XmVv7bUJ418E8Yoc1hjuviiiZmrL38w1ymUdqq4JaGeFUxjM-HeS7Oc-SSFcg/OtieTreat_-11.jpg"
+    filter="dark"
+        >
+          
         <div className={classes.container}>
+          <BackgroundVideo/>
           <GridContainer>
+            
+           
             <GridItem xs={12} sm={6} md={6}>
-              <h1>WEELCOME TO PUPPY LOVE {user?.username}!</h1>
+              <h1>Hello {user?.username}!</h1>
               <h1 className={classes.title}>
                 Puppies make everything better..
               </h1>
@@ -68,6 +76,7 @@ export default function LandingPage({ user, ...rest }) {
           <SectionProduct />
           <SectionTeam />
           <SectionWork />
+          
         </div>
       </div>
       <Footer
@@ -112,9 +121,8 @@ export default function LandingPage({ user, ...rest }) {
               <a
                 href="https://www.creative-tim.com/?ref=mkpr-landing"
                 target="_blank">
-                Creative Tim
+               
               </a>{" "}
-              for a better web.
             </div>
           </div>
         }

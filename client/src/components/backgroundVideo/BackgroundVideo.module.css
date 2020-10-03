@@ -7,6 +7,9 @@
     left: 0;
     z-index:-1;
     position: absolute;
+    /* border-style: solid;
+    border-width: 25px;
+    border-color: black; */
 
   }
   
@@ -53,4 +56,10 @@
     display: block;
     margin: 15px auto;
     border: #f1f1f1 1px solid;
+  }
+  @media screen and (max-device-width: 1000px) and (orientation: portrait){
+  .Video {
+      display: none
+    }
+    /* some CSS here */
   }

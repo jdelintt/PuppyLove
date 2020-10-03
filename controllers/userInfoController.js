@@ -10,9 +10,7 @@ module.exports = {
   },
 
   findAll: function (req, res) {
-    console.log(db);
-    console.log(db.User);
-    db.UserInfo.find(req.query)
+    db.DogStatic.find({})
       .sort({ name: -1 })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
@@ -49,6 +47,7 @@ module.exports = {
       { _id: req.params.id },
       {
         $set: {
+          userinfo: req.body.user,
           breed: req.body.breed,
           malePref: req.body.malePref,
           femalePref: req.body.femalePref,

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
+// This file empties the Books collection and inserts the books belowd
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/doggydata");
 
@@ -162,8 +162,8 @@ const dogSeed = [
 ];
 
 // console.log(db.userInfo);
-db.UserInfo.deleteOne({})
-  .then(() => db.UserInfo.collection.insertMany(dogSeed))
+db.DogStatic.deleteOne({})
+  .then(() => db.DogStatic.collection.insertMany(dogSeed))
   .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

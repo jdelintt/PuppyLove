@@ -27,7 +27,7 @@ import SectionWork from "./Sections/SectionWork.js";
 
 const useStyles = makeStyles(landingPageStyle);
 
-export default function LandingPage({ ...rest }) {
+export default function LandingPage({ user, ...rest }) {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -35,21 +35,27 @@ export default function LandingPage({ ...rest }) {
   const classes = useStyles();
   return (
     <div>
-      <Parallax image="https://images.squarespace-cdn.com/content/v1/5516c5b7e4b03ac54f20366d/1553273442353-W0RFRN1IOUXX4FPJOPNM/ke17ZwdGBToddI8pDm48kFmfxoboNKufWj-55Bgmc-J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iXS6XmVv7bUJ418E8Yoc1hjuviiiZmrL38w1ymUdqq4JaGeFUxjM-HeS7Oc-SSFcg/OtieTreat_-11.jpg" filter="dark">
+      <Parallax
+        image="https://images.squarespace-cdn.com/content/v1/5516c5b7e4b03ac54f20366d/1553273442353-W0RFRN1IOUXX4FPJOPNM/ke17ZwdGBToddI8pDm48kFmfxoboNKufWj-55Bgmc-J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iXS6XmVv7bUJ418E8Yoc1hjuviiiZmrL38w1ymUdqq4JaGeFUxjM-HeS7Oc-SSFcg/OtieTreat_-11.jpg"
+        filter="dark">
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
-              <h1 className={classes.title}>Puppies make everything better..</h1>
+              <h1>WEELCOME TO PUPPY LOVE {user?.username}!</h1>
+              <h1 className={classes.title}>
+                Puppies make everything better..
+              </h1>
               <h4>
-                Come and get your Puppy Love!  We are proud to present a home for dog lovers to interact with local canines who are in despeate need of HUGS!!
+                Come and get your Puppy Love! We are proud to present a home for
+                dog lovers to interact with local canines who are in despeate
+                need of HUGS!!
               </h4>
               <br />
               <Button
                 color="danger"
                 size="lg"
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-              >
+                target="_blank">
                 <i className="fas fa-play" />
                 Watch our home video
               </Button>
@@ -73,8 +79,7 @@ export default function LandingPage({ ...rest }) {
                   <a
                     href="https://www.creative-tim.com/?ref=mkpr-landing"
                     target="_blank"
-                    className={classes.block}
-                  >
+                    className={classes.block}>
                     Creative Tim
                   </a>
                 </ListItem>
@@ -82,8 +87,7 @@ export default function LandingPage({ ...rest }) {
                   <a
                     href="https://www.creative-tim.com/presentation?ref=mkpr-landing"
                     target="_blank"
-                    className={classes.block}
-                  >
+                    className={classes.block}>
                     About us
                   </a>
                 </ListItem>
@@ -96,8 +100,7 @@ export default function LandingPage({ ...rest }) {
                   <a
                     href="https://www.creative-tim.com/license?ref=mkpr-landing"
                     target="_blank"
-                    className={classes.block}
-                  >
+                    className={classes.block}>
                     Licenses
                   </a>
                 </ListItem>
@@ -108,8 +111,7 @@ export default function LandingPage({ ...rest }) {
               <Favorite className={classes.icon} /> by{" "}
               <a
                 href="https://www.creative-tim.com/?ref=mkpr-landing"
-                target="_blank"
-              >
+                target="_blank">
                 Creative Tim
               </a>{" "}
               for a better web.

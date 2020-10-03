@@ -5,18 +5,8 @@ const energyLevels = ["Mellow", "Moderate", "High", "Hyper"];
 const allergies = ["Short", "Medium", "Long"];
 
 export default () => {
-  const [prefs, setPrefs] = useState({
-    size: 5,
-    age: 1,
-    energyLevel: 0,
-    gender: 0,
-    allergies: 0,
-  });
-
-  //data
-  const [breedData, setBreed] = useState([]);
-
   const [APIdata, setData] = useState({
+    user: "",
     breed: "",
     malePref: false,
     femalePref: false,
@@ -29,16 +19,18 @@ export default () => {
   console.log(APIdata);
 
   useEffect(() => {
-    getBreedList();
+    // getBreedList();
+    var id = localStorage.getItem("id");
+    setData({ ...APIdata, user: id });
   }, []);
 
-  function getBreedList() {
-    API.getBaseBreedsList()
-      .then((res) => setBreed({ breeds: res.data.message }))
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }
-  console.log(breedData);
+  // function getBreedList() {
+  //   API.getBaseBreedsList()
+  //     .then((res) => setBreed({ breeds: res.data.message }))
+  //     .then((res) => console.log(res))
+  //     .catch((err) => console.log(err));
+  // }
+  // console.log(breedData);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -47,13 +39,11 @@ export default () => {
   };
   //event.target.checked
   const handleInputChange = ({ target: { name, value } }) => {
-    setPrefs({ ...prefs, [name]: value });
-    console.log(prefs);
     setData({ ...APIdata, [name]: value });
   };
 
   // const handleCheckChange =
-  // console.log(prefs);
+  // console.log(APIdata);
 
   // if (!breedData) return <h1>Loading...</h1>;
 
@@ -126,7 +116,7 @@ export default () => {
           </div>
           <div className="sliders">
             <legend>Size</legend>
-            <label for="sizeSlide">{prefs.size} LBS</label>
+            <label for="sizeSlide">{APIdata.size} LBS</label>
             <input
               defaultValue="5"
               name="size"
@@ -141,7 +131,7 @@ export default () => {
           </div>
           <div className="sliders">
             <legend>Age</legend>
-            <label for="ageSlide">{prefs.age} YR</label>
+            <label for="ageSlide">{APIdata.age} YR</label>
             <input
               name="age"
               defaultValue="1"
@@ -156,7 +146,7 @@ export default () => {
           </div>
           <div className="sliders">
             <legend>Energy Level</legend>
-            <label for="energySlide">{energyLevels[prefs.energyLevel]}</label>
+            <label for="energySlide">{energyLevels[APIdata.energyLevel]}</label>
             <input
               name="energyLevel"
               defaultValue="0"
@@ -171,7 +161,7 @@ export default () => {
           </div>
           <div className="sliders">
             <legend>Allergies</legend>
-            <label for="allergiesSlide">{allergies[prefs.allergies]}</label>
+            <label for="allergiesSlide">{allergies[APIdata.allergies]}</label>
             <input
               name="allergies"
               defaultValue="0"

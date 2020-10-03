@@ -3,13 +3,7 @@ const Schema = mongoose.Schema;
 
 const UserInfoSchema = new Schema({
   //userinfo
-  userinfo: {
-    credidentails: {
-      id: { type: String },
-      password: { type: String },
-    },
-    name: { type: String },
-  },
+  userinfo: { type: String },
   //dog pref
   breed: [{ type: String }],
   malePref: { type: Boolean },

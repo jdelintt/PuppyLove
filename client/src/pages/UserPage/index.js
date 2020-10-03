@@ -15,6 +15,7 @@ import InfoArea from "../../components/InfoArea/InfoArea.js";
 import Timeline from "@material-ui/icons/Timeline";
 import Grid from "@material-ui/core/Grid"
 import UserDogsFilter from "../../components/Userfilter/UserDogsFilter"
+import Dogsfill from "../UserPage/Userlist";
 const style = {
   ...cardsStyle
 };
@@ -213,8 +214,8 @@ export default function CardExampleCardProfile() {
           <i className="fab fa-google" />
         </Button>
       </CardFooter>
+    <Dogsfill/>
     </Card>
-    <UserDogsFilter/>
     </div>
     </div>
     </>

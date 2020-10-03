@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -11,7 +13,6 @@ import CardHeader from "../../components/Card/CardHeader.js";
 import cardsStyle from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
 import CardFooter from "../../components/Card/CardFooter.js";
 import { makeStyles } from "@material-ui/core/styles";
-import Favorite from '@material-ui/icons/Favorite';
 
 const style = {
   ...cardsStyle
@@ -63,13 +64,11 @@ const responsive = {
 
 
 function Dogsfill() {
-  
+  const [show, setShow] = useState(false);
   const [dog, fillDogs] = useState([]);
 
-  
-  const [commentInput, setComment] = useState({
-    comment: "",
-  });
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     findDogs();
@@ -81,11 +80,6 @@ function Dogsfill() {
       .catch((err) => console.log(err));
     // Add code here to get all books from the database and store them using setBooks
   }
-  
-  const handleInput = ({ target: { name, value } }) => {
-    setComment({ ...commentInput, [name]: value });
-    console.log(commentInput);
-  };
   const classes = useStyles();
   return ( 
     <div>
@@ -95,7 +89,7 @@ function Dogsfill() {
       infinite={true}
     >
     
-      {dog.map((item, index) => 
+      {dog.map(item => 
         <p key={item._id}>
         <Card1 profile style={{ maxWidth: "200px" }}>
           <CardHeader image>
@@ -119,23 +113,31 @@ function Dogsfill() {
             For Adoption!
             </h6>
             <CustomInput
-              name = "comment"
               labelText="Leave a comment!"
-              id={`float ${index + 1}`}
-              onChange = {handleInput}
+              id="float"
               formControlProps={{
               fullWidth: true
               }}
             />
-            {/* {comment ? null : <Button onClick={post comment function}>Submit</Button>} */}
-            <Button
-              // onClick = {postfunction}
-              >Submit</Button>
-            <Button round className={classes.buttonStyle}><Favorite/>
-                  Schedule a play date!
-            </Button>
+            <CustomInput
+              labelText="Schedule a comment!"
+              id="float"
+              formControlProps={{
+              fullWidth: true
+              }}
+            />
           </CardBody>
-          
+          <CardFooter profile className={classes.justifyContentCenter}>
+          <Button justIcon round color="twitter">
+            <i className="fab fa-twitter" />
+          </Button>
+          <Button justIcon round color="facebook">
+             <i className="fab fa-facebook" />
+          </Button>
+          <Button justIcon round color="google">
+            <i className="fab fa-google" />
+          </Button>
+          </CardFooter>
         </Card1>
             {/* <img src = {require(`../../assets/img/dogpics/${item.image}`)}/> */}
             

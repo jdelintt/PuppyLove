@@ -1,8 +1,6 @@
-LOGINUSER.JS;
-
 const router = require("express").Router();
-const unserInfoController = require("../../controllers/userInfoController");
+const userInfoController = require("../../controllers/userInfoController");
 
-router.route("/").get(unserInfoController.findAllUsers);
+router.route("/").get(userInfoController.Authenticate);
 
 module.exports = router;

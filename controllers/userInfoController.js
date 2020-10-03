@@ -8,13 +8,22 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
-  findAllUsers: function (req, res) {
-    db.UserSchema.find({})
-      .sort({ name: -1 })
-      .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+  Authenticate: function (req, res, next) {
+    db.UserSchema.findOne({ username: req.body.username }, function (
+      error,
+      username
+    ) {
+      if (error) throw error;
+      if (username) {
+        username.comparePassword(req.body.password, function (error, isMatch) {
+          if (error) throw error;
+          res.json(username);
+        });
+      } else {
+        res.status(404).send("Inavlid login info");
+      }
+    });
   },
-
   findAll: function (req, res) {
     db.DogStatic.find({})
       .sort({ name: -1 })
@@ -28,6 +37,12 @@ module.exports = {
   },
 
   create: function (req, res) {
+    //breed, malepref, femalepref, size, age, energylevel, allergies
+    // console.log(req.body);
+
+    //console logs breed
+    // console.log(req.body.breed);
+    // console.log(db.UserInfo);
     db.UserInfo.create(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));

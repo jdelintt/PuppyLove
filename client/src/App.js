@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Questionaire from "./pages/Questionaire/Questionaire";
 import UserPage from "./pages/UserPage/index";
@@ -12,7 +7,6 @@ import Navbar from "./components/Nav/Nav";
 import "./App.css";
 import Footer from "./components/Footer";
 import BackgroundCheck from "./pages/BackgroundCheck/BackgroundCheck";
-import About from "./pages/About/About";
 import CardExampleCardProfile from "../src/pages/UserPage/index";
 
 import Card from "./components/Card/index";

@@ -1,11 +1,14 @@
 const router = require("express").Router();
 const userInfoRoutes = require("./userInfo");
 const createUser = require("./newUser");
+const loginUser = require("./loginUser");
 const db = require("../../models");
 
 router.use("/userinfo", userInfoRoutes);
 
 router.use("/createuser", createUser);
+
+router.use("/loginUser", loginUser);
 
 router.get("/userdata/:id", (req, res) => {
   console.log(req.params.id);

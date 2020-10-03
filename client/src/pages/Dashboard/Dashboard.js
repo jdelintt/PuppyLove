@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import Container from "../../components/Container";
 import { Animated } from "react-animated-css";
@@ -12,6 +12,11 @@ function Signup({ setUser }) {
 
   const handleInput = ({ target: { name, value } }) => {
     setInfo({ ...info, [name]: value });
+    console.log(`This is the ${info}`);
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
     console.log(info);
   };
 
@@ -31,7 +36,8 @@ function Signup({ setUser }) {
         animationIn="wobble"
         animationOut="fadeOut"
         animationInDuration={1000}
-        isVisible={true}>
+        isVisible={true}
+      >
         <h1>Puppy Love</h1>
       </Animated>
       <Form>
@@ -57,7 +63,7 @@ function Signup({ setUser }) {
             placeholder="Password"
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button onClick={handleLogin} variant="primary" type="submit">
           Login
         </Button>
         <Button onClick={handleSubmit} variant="primary" type="submit">

@@ -8,6 +8,12 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+  findAllUsers: function (req, res) {
+    db.UserSchema.find({})
+      .sort({ name: -1 })
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
+  },
 
   findAll: function (req, res) {
     db.DogStatic.find({})
@@ -20,24 +26,8 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
-  // queries all the matching dogs
-  // dogHistory: function (req, res) {
-  //   db.UserInfo
-  //     .find(
-  //       {where : }
-  //     )
-  //     .then((dbModel) => res.json(dbModel))
-  //     .catch((err) => res.status(422).json(err));
-  // },
 
-  //saves user pref
   create: function (req, res) {
-    //breed, malepref, femalepref, size, age, energylevel, allergies
-    // console.log(req.body);
-
-    //console logs breed
-    // console.log(req.body.breed);
-    // console.log(db.UserInfo);
     db.UserInfo.create(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));

@@ -30,6 +30,9 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.10.7",
+    "react-animation": "^1.2.2",
+    "react-background-video": "^2.0.0",
+    "react-loading-skeleton": "^2.1.1",
     "react-multi-carousel": "^2.5.5",
     "react-slick": "^0.27.11",
     "slick-carousel": "^1.8.1"

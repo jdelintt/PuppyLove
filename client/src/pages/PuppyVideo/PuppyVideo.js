@@ -1,23 +1,23 @@
-import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
-import ReactPlayer from "react-player"
+import React from "react";
+import Card from "@material-ui/core/Card";
+// import CardActions from '@material-ui/core/CardActions';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Link from "@material-ui/core/Link";
+import ReactPlayer from "react-player";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
         Your Website
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
@@ -38,14 +38,14 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   card: {
-    height: '100%',
-    width:"215%",
-    display: 'flex',
-    flexDirection: 'column',
-    marginLeft:"150px",
+    height: "100%",
+    width: "215%",
+    display: "flex",
+    flexDirection: "column",
+    marginLeft: "150px",
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: "56.25%", // 16:9
   },
   cardContent: {
     flexGrow: 1,
@@ -55,9 +55,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(6),
   },
   h1: {
-    textAlign:"center", //
-  }
-
+    textAlign: "center", //
+  },
 }));
 
 const cards = [1];
@@ -68,22 +67,18 @@ export default function Album() {
   return (
     <React.Fragment>
       <CssBaseline />
-      
+
       <main>
         {/* Hero unit */}
-        <div className={classes.heroContent}>
-          
-        </div>
+        <div className={classes.heroContent}></div>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
-            <h1 className={classes.h1}>Puppy Love</h1>
+          <h1 className={classes.h1}>Puppy Love</h1>
           <Grid container spacing={1}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
-                  <ReactPlayer
-                  url="https://youtu.be/oNfIbv7iD9w?t=50"
-                  />
+                  <ReactPlayer url="https://youtu.be/oNfIbv7iD9w?t=50" />
                   {/* <CardContent >
                     <Typography gutterBottom variant="h5" component="h2">
                     Puppy Care
@@ -102,8 +97,6 @@ export default function Album() {
         </Container>
       </main>
       {/* Footer */}
-      
     </React.Fragment>
   );
 }
-

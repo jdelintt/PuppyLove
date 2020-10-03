@@ -12,12 +12,13 @@ function Signup({ setUser }) {
 
   const handleInput = ({ target: { name, value } }) => {
     setInfo({ ...info, [name]: value });
-    console.log(`This is the ${info}`);
   };
 
   const handleLogin = (event) => {
     event.preventDefault();
-    console.log(info);
+    API.AuthenticateUser(info).then(() => {
+      window.location.replace("/userpage");
+    });
   };
 
   const handleSubmit = (event) => {

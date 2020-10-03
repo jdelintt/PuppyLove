@@ -1,19 +1,17 @@
 const router = require("express").Router();
-const unserInfoController = require("../../controllers/userInfoController");
+const userInfoController = require("../../controllers/userInfoController");
 
 // Matches with "/api/userinfo"
 router
   .route("/")
-  .get(unserInfoController.findAll)
-  .post(unserInfoController.create);
+  .get(userInfoController.findAll)
+  .post(userInfoController.create);
 
 // Matches with "/api/userinfo/:id"
 router
   .route("/:id")
-  .get(unserInfoController.findById)
-  .put(unserInfoController.update)
-  .delete(unserInfoController.remove);
-
-
+  .get(userInfoController.findById)
+  .put(userInfoController.update)
+  .delete(userInfoController.remove);
 
 module.exports = router;

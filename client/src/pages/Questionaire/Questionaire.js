@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Questionaire.css";
 import API from "../../utils/API";
+import Button from "../../components/CustomButtons/Button.js";
+
 const energyLevels = ["Mellow", "Moderate", "High", "Hyper"];
 const allergies = ["Short", "Medium", "Long"];
 
@@ -178,9 +180,17 @@ export default () => {
           <button
             type="submit"
             onClick={handleSubmit}
+            href= "/userinfo"
             className="btn btn-primary">
             Submit
           </button>
+          <Button
+                color="success"
+                size="lg"
+                href="/user"
+                >
+                Go to your user page!
+              </Button>
         </form>
       </div>
     </>

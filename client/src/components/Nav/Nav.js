@@ -42,7 +42,7 @@ const Navbar = ({ logout }) => {
               to="#"
               onClick={logout}
               className="nav-link nav-item navbar-brand">
-              UGLY BTN
+              LogOut
             </Link>
           </li>
         </ul>

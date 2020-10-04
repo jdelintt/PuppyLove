@@ -14,6 +14,8 @@ import cardsStyle from "../../assets/jss/material-kit-pro-react/views/components
 import InfoArea from "../../components/InfoArea/InfoArea.js";
 import PetsIcon from '@material-ui/icons/Pets';
 import Grid from "@material-ui/core/Grid";
+import Dogsfill from "./Userlist"
+import UserDogsFilter from "../../components/Userfilter/UserDogsFilter"
 // import UserDogsFilter from "../../components/Userfilter/UserDogsFilter";
 const style = {
   ...cardsStyle,
@@ -34,188 +36,17 @@ export default function CardExampleCardProfile({ user }) {
       <CardExampleCardRotating />
       <h3 className="mt-5 mb-3" style={{textAlign:"center"}}>Dogs You've Interacted With:</h3>
       <div className="row mt-5">
-        <div className="col-md-3">
-          <Card profile style={{ maxWidth: "200px", margin: "auto" }}>
-            <CardHeader image>
-              <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                <img
-                  src="https://www.readersdigest.ca/wp-content/uploads/2013/03/6-facts-to-know-before-owning-a-puppy.jpg"
-                  alt="..."
-                />
-              </a>
-              <div
-                className={classes.coloredShadow}
-                style={{
-                  backgroundImage: `url(https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)`,
-                  opacity: "1",
-                }}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Cutest Puppy Ever</h4>
-              <h6
-                className={`${classes.cardCategory} ${classes.cardDescription}`}
-              >
-                For Adoption!
-              </h6>
-              <CustomInput
-                labelText="Leave a comment!"
-                id="float"
-                formControlProps={{
-                  fullWidth: true,
-                }}
-              />
-            </CardBody>
-            <CardFooter profile className={classes.justifyContentCenter}>
-              <Button justIcon round color="twitter">
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button justIcon round color="facebook">
-                <i className="fab fa-facebook" />
-              </Button>
-              <Button justIcon round color="google">
-                <i className="fab fa-google" />
-              </Button>
-            </CardFooter>
-          </Card>
+        <Dogsfill/>
+        <div className="col-md-12">
+        {/* <Dogsfill/> */}
+          
+              </div>
+              <div className="col-md-12">
+        <UserDogsFilter/>
+          
               </div>
 
-                    <div className="col-md-3">
-          <Card profile style={{ maxWidth: "200px", margin:"auto" }}>
-            <CardHeader image>
-              <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                <img
-                  src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2020/04/shelter-dog-cropped-1.jpg"
-                  alt="..."
-                />
-              </a>
-              <div
-                className={classes.coloredShadow}
-                style={{
-                  backgroundImage: `url(https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)`,
-                  opacity: "1",
-                }}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Cutest Puppy Ever</h4>
-              <h6
-                className={`${classes.cardCategory} ${classes.cardDescription}`}
-              >
-                For Adoption!
-              </h6>
-              <CustomInput
-                labelText="Leave a comment!"
-                id="float"
-                formControlProps={{
-                  fullWidth: true,
-                }}
-              />
-            </CardBody>
-            <CardFooter profile className={classes.justifyContentCenter}>
-              <Button justIcon round color="twitter">
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button justIcon round color="facebook">
-                <i className="fab fa-facebook" />
-              </Button>
-              <Button justIcon round color="google">
-                <i className="fab fa-google" />
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
-        <div className="col-md-3">
-          <Card profile style={{ maxWidth: "200px", margin:"auto" }}>
-            <CardHeader image>
-              <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                <img
-                  src="https://dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg"
-                  alt="..."
-                />
-              </a>
-              <div
-                className={classes.coloredShadow}
-                style={{
-                  backgroundImage: `url(https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)`,
-                  opacity: "1",
-                }}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Cutest Puppy Ever</h4>
-              <h6
-                className={`${classes.cardCategory} ${classes.cardDescription}`}
-              >
-                For Adoption!
-              </h6>
-              <CustomInput
-                labelText="Leave a comment!"
-                id="float"
-                formControlProps={{
-                  fullWidth: true,
-                }}
-              />
-            </CardBody>
-            <CardFooter profile className={classes.justifyContentCenter}>
-              <Button justIcon round color="twitter">
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button justIcon round color="facebook">
-                <i className="fab fa-facebook" />
-              </Button>
-              <Button justIcon round color="google">
-                <i className="fab fa-google" />
-              </Button>
-            </CardFooter>
-          </Card>
-          </div>
-                <div className="col-md-3">
-          <Card profile style={{ maxWidth: "200px", margin:"auto" }}>
-            <CardHeader image>
-              <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSOYAzJv7fg2dYpdANGVXDExQFwwYqSoBMz9A&usqp=CAU"
-                  alt="..."
-                />
-              </a>
-              <div
-                className={classes.coloredShadow}
-                style={{
-                  backgroundImage: `url(https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)`,
-                  opacity: "1",
-                }}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Cutest Puppy Ever</h4>
-              <h6
-                className={`${classes.cardCategory} ${classes.cardDescription}`}
-              >
-                For Adoption!
-              </h6>
-              <CustomInput
-                labelText="Leave a comment!"
-                id="float"
-                formControlProps={{
-                  fullWidth: true,
-                }}
-              />
-            </CardBody>
-            <CardFooter profile className={classes.justifyContentCenter}>
-              <Button justIcon round color="twitter">
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button justIcon round color="facebook">
-                <i className="fab fa-facebook" />
-              </Button>
-              <Button justIcon round color="google">
-                <i className="fab fa-google" />
-              </Button>
-            </CardFooter>
-          </Card>
-          {/* <UserDogsFilter /> */}
-        </div>
+                    
       </div>
     </>
   );

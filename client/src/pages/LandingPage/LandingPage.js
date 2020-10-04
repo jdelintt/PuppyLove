@@ -67,6 +67,13 @@ export default function LandingPage({ user, ...rest }) {
                 <i className="fas fa-play" />
                 Watch our home video
               </Button>
+              <Button
+                color="success"
+                size="lg"
+                href="/signup"
+                >
+                Log In
+              </Button>
             </GridItem>
           </GridContainer>
         </div>

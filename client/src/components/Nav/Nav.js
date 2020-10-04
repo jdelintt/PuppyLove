@@ -18,8 +18,8 @@ const Navbar = ({ logout }) => {
       <div className="collapse navbar-collapse" id="navbarColor03">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link to="/hang" className="nav-link nav-item navbar-brand">
-              Preferences
+            <Link to="/userpage" className="nav-link nav-item navbar-brand">
+              Dashboard
             </Link>
           </li>
           <li className="nav-item">
@@ -28,9 +28,9 @@ const Navbar = ({ logout }) => {
             </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/hang">
-              Hang with a pup
-            </a>
+            <Link className="nav-link nav-item navbar-brand" to="/userlist">
+              Hang With a Pup
+            </Link>
           </li>
           <li className="nav-item">
             <Link to="/about" className="nav-link nav-item navbar-brand">

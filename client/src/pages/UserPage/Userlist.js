@@ -60,7 +60,6 @@ const responsive = {
 };
 
 function Dogsfill() {
-  console.log(imgCMS);
   const [dog, fillDogs] = useState([]);
 
   const [commentInput, setComment] = useState({
@@ -74,7 +73,6 @@ function Dogsfill() {
   function findDogs() {
     API.getDogs()
       .then((res) => {
-        console.log(res.data);
         fillDogs(res.data);
       })
       .catch((err) => console.log(err));
@@ -83,19 +81,15 @@ function Dogsfill() {
 
   const handleInput = ({ target: { name, value } }) => {
     setComment({ ...commentInput, [name]: value });
-    console.log(commentInput);
   };
   const classes = useStyles();
   return (
     <div>
       <Carousel responsive={responsive} swipeable={true} infinite={true}>
         {dog.map((item, index) => {
-          console.log(item);
-          console.log(imgCMS[item.imagePath]);
           return (
-            <>
-              <p key={item._id}>
-                <Card1 profile style={{ maxWidth: "200px" }}>
+            <div key={item._id}>
+                <Card1 profile style={{ maxWidth: "200px", margin:"auto", marginTop: "100px" }}>
                   <CardHeader image>
                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img src={imgCMS[item.imagePath]} alt="..." />
@@ -117,7 +111,7 @@ function Dogsfill() {
                     <CustomInput
                       name="comment"
                       labelText="Leave a comment!"
-                      id={`float ${index + 1}`}
+                      id={`float${index + 1}`}
                       onChange={handleInput}
                       formControlProps={{
                         fullWidth: true,
@@ -129,18 +123,15 @@ function Dogsfill() {
                     >
                       Submit
                     </Button>
-                    <Button round className={classes.buttonStyle}>
+                    <Button className={classes.buttonStyle}>
                       <Favorite />
                       Schedule a play date!
                     </Button>
                   </CardBody>
                 </Card1>
-                {/* <img src = {require(`../../assets/img/dogpics/${item.image}`)}/> */}
-              </p>
-            </>
+            </div>
           );
         })}
-        )
       </Carousel>
     </div>
   );

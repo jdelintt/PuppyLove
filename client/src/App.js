@@ -69,7 +69,7 @@ function App() {
               <Route exact path="/userinfo" component={Card} />
               <Route exact path="/video" component={PuppyVideo} />
               <Route exact path="/about" component={AboutUsPage} />
-              <Route exact path="/userLIst" component={Dogsfill} />
+              <Route exact path="/userlist" component={Dogsfill} />
               <Route exact path="/user" component={CardExampleCardProfile} />
             </>
           )}

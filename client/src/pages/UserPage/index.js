@@ -12,7 +12,7 @@ import CustomInput from "../../components/CustomInput/CustomInput.js";
 import CardExampleCardRotating from "../Dashboard/index";
 import cardsStyle from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
 import InfoArea from "../../components/InfoArea/InfoArea.js";
-import Timeline from "@material-ui/icons/Timeline";
+import PetsIcon from '@material-ui/icons/Pets';
 import Grid from "@material-ui/core/Grid";
 // import UserDogsFilter from "../../components/Userfilter/UserDogsFilter";
 const style = {
@@ -25,12 +25,17 @@ export default function CardExampleCardProfile({ user }) {
   const classes = useStyles();
   return (
     <>
+      <InfoArea
+        username={user?.username || ""}
+        description="We've created the perfect place for you to snuggle with your best friend!"
+        icon={PetsIcon}
+        iconColor="purple"
+      />
       <CardExampleCardRotating />
-      <h1>WELCOME TO PUPPY LOVE {user?.username || ""}!</h1>
-      <div className="row ">
+      <h3 className="mt-5 mb-3" style={{textAlign:"center"}}>Dogs You've Interacted With:</h3>
+      <div className="row mt-5">
         <div className="col-md-3">
-          <h1>Dogs You've Interacted With:</h1>
-          <Card profile style={{ maxWidth: "200px" }}>
+          <Card profile style={{ maxWidth: "200px", margin: "auto" }}>
             <CardHeader image>
               <a href="#pablo" onClick={(e) => e.preventDefault()}>
                 <img
@@ -49,7 +54,8 @@ export default function CardExampleCardProfile({ user }) {
             <CardBody>
               <h4 className={classes.cardTitle}>Cutest Puppy Ever</h4>
               <h6
-                className={`${classes.cardCategory} ${classes.cardDescription}`}>
+                className={`${classes.cardCategory} ${classes.cardDescription}`}
+              >
                 For Adoption!
               </h6>
               <CustomInput
@@ -72,7 +78,10 @@ export default function CardExampleCardProfile({ user }) {
               </Button>
             </CardFooter>
           </Card>
-          <Card profile style={{ maxWidth: "200px" }}>
+              </div>
+
+                    <div className="col-md-3">
+          <Card profile style={{ maxWidth: "200px", margin:"auto" }}>
             <CardHeader image>
               <a href="#pablo" onClick={(e) => e.preventDefault()}>
                 <img
@@ -91,7 +100,8 @@ export default function CardExampleCardProfile({ user }) {
             <CardBody>
               <h4 className={classes.cardTitle}>Cutest Puppy Ever</h4>
               <h6
-                className={`${classes.cardCategory} ${classes.cardDescription}`}>
+                className={`${classes.cardCategory} ${classes.cardDescription}`}
+              >
                 For Adoption!
               </h6>
               <CustomInput
@@ -115,16 +125,8 @@ export default function CardExampleCardProfile({ user }) {
             </CardFooter>
           </Card>
         </div>
-        <div className="col-md-6 ">
-          <InfoArea
-            title="Welcome to Puppy Love"
-            description="We've created the perfect place for you to snuggle with your best friend!"
-            icon={Timeline}
-            iconColor="purple"
-          />
-        </div>
         <div className="col-md-3">
-          <Card profile style={{ maxWidth: "200px", position: "right" }}>
+          <Card profile style={{ maxWidth: "200px", margin:"auto" }}>
             <CardHeader image>
               <a href="#pablo" onClick={(e) => e.preventDefault()}>
                 <img
@@ -143,7 +145,8 @@ export default function CardExampleCardProfile({ user }) {
             <CardBody>
               <h4 className={classes.cardTitle}>Cutest Puppy Ever</h4>
               <h6
-                className={`${classes.cardCategory} ${classes.cardDescription}`}>
+                className={`${classes.cardCategory} ${classes.cardDescription}`}
+              >
                 For Adoption!
               </h6>
               <CustomInput
@@ -166,7 +169,9 @@ export default function CardExampleCardProfile({ user }) {
               </Button>
             </CardFooter>
           </Card>
-          <Card profile style={{ maxWidth: "200px" }}>
+          </div>
+                <div className="col-md-3">
+          <Card profile style={{ maxWidth: "200px", margin:"auto" }}>
             <CardHeader image>
               <a href="#pablo" onClick={(e) => e.preventDefault()}>
                 <img
@@ -185,7 +190,8 @@ export default function CardExampleCardProfile({ user }) {
             <CardBody>
               <h4 className={classes.cardTitle}>Cutest Puppy Ever</h4>
               <h6
-                className={`${classes.cardCategory} ${classes.cardDescription}`}>
+                className={`${classes.cardCategory} ${classes.cardDescription}`}
+              >
                 For Adoption!
               </h6>
               <CustomInput

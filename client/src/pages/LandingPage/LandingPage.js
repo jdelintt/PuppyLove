@@ -62,10 +62,10 @@ export default function LandingPage({ user, ...rest }) {
               <Button
                 color="danger"
                 size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
+                href="/singup"
                 target="_blank">
                 <i className="fas fa-play" />
-                Watch our home video
+                Login/Sigunup
               </Button>
             </GridItem>
           </GridContainer>

@@ -28,11 +28,6 @@ const Navbar = ({ logout }) => {
             </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/hang">
-              Hang with a pup
-            </a>
-          </li>
-          <li className="nav-item">
             <Link to="/about" className="nav-link nav-item navbar-brand">
               About
             </Link>

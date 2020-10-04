@@ -12,13 +12,10 @@ function Signup({ setUser }) {
 
   const handleInput = ({ target: { name, value } }) => {
     setInfo({ ...info, [name]: value });
-    console.log(info);
   };
 
   const handleLogin = (event) => {
-    alert("Here I am!");
     event.preventDefault();
-    console.log(info);
     // setLogin({ target: { name, value } });
     API.AuthenticateUser(info).then(({ data }) => {
       // localstorage set username and user can have access to it throughotu the pge

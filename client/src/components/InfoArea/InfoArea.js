@@ -6,26 +6,25 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Icon from "@material-ui/core/Icon";
-
 import styles from "../../assets/jss/material-kit-pro-react/components/infoStyle";
 
 const useStyles = makeStyles(styles);
 
 export default function InfoArea(props) {
-  const { title, description, iconColor, vertical, className } = props;
+  const { description, iconColor, vertical, className, username } = props;
   const classes = useStyles();
   const iconWrapper = classNames({
     [classes.iconWrapper]: true,
     [classes[iconColor]]: true,
-    [classes.iconWrapperVertical]: vertical
+    [classes.iconWrapperVertical]: vertical,
   });
   const iconClasses = classNames({
     [classes.icon]: true,
-    [classes.iconVertical]: vertical
+    [classes.iconVertical]: vertical,
   });
   const infoAreaClasses = classNames({
     [classes.infoArea]: true,
-    [className]: className !== undefined
+    [className]: className !== undefined,
   });
   let icon = null;
   switch (typeof props.icon) {
@@ -38,17 +37,20 @@ export default function InfoArea(props) {
   }
   return (
     <div className={infoAreaClasses}>
-      <div className={iconWrapper}>{icon}</div>
       <div className={classes.descriptionWrapper}>
-        <h4 className={classes.title}>{title}</h4>
-        <div className={classes.description}>{description}</div>
+        <h2 className={classes.title}>
+          <span>Welcome To Puppy </span>
+          <span className={iconWrapper}>{icon}</span>
+          <span>{` Love ${username}`}</span>
+        </h2>
+        <h4 className={classes.description}>{description}</h4>
       </div>
     </div>
   );
 }
 
 InfoArea.defaultProps = {
-  iconColor: "gray"
+  iconColor: "gray",
 };
 
 InfoArea.propTypes = {
@@ -62,8 +64,9 @@ InfoArea.propTypes = {
     "success",
     "info",
     "rose",
-    "gray"
+    "gray",
+    "purple",
   ]),
   vertical: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };

@@ -11,14 +11,12 @@ import {
 
 const infoStyle = {
   infoArea: {
-    maxWidth: "360px",
+    maxWidth: "100%",
     margin: "0 auto",
     padding: "70px 0 30px"
   },
   iconWrapper: {
-    float: "left",
-    marginTop: "24px",
-    marginRight: "10px"
+    marginTop: "15px",
   },
   primary: {
     color: primaryColor[0]
@@ -38,6 +36,9 @@ const infoStyle = {
   rose: {
     color: roseColor[0]
   },
+  purple: {
+    color: "purple"
+  },
   gray: {
     color: grayColor[0]
   },
@@ -48,7 +49,8 @@ const infoStyle = {
   },
   descriptionWrapper: {
     color: grayColor[0],
-    overflow: "hidden"
+    overflow: "hidden",
+    textAlign: "center"
   },
   title: {
     ...title,
@@ -57,7 +59,6 @@ const infoStyle = {
   },
   description: {
     color: grayColor[0],
-    overflow: "hidden",
     marginTop: "0px",
     "& p": {
       color: grayColor[0],

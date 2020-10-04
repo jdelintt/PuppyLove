@@ -9,14 +9,18 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   Authenticate: function (req, res, next) {
+    console.log("Authentication funtion hit");
     db.UserSchema.findOne({ username: req.body.username }, function (
       error,
       username
     ) {
       if (error) throw error;
       if (username) {
+        console.log("if statement accessed");
         username.comparePassword(req.body.password, function (error, isMatch) {
+          console.log("it matched!");
           if (error) throw error;
+
           res.json(username);
         });
       } else {

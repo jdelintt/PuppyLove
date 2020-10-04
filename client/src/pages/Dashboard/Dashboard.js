@@ -12,11 +12,17 @@ function Signup({ setUser }) {
 
   const handleInput = ({ target: { name, value } }) => {
     setInfo({ ...info, [name]: value });
+    console.log(info);
   };
 
   const handleLogin = (event) => {
+    alert("Here I am!");
     event.preventDefault();
-    API.AuthenticateUser(info).then(() => {
+    console.log(info);
+    // setLogin({ target: { name, value } });
+    API.AuthenticateUser(info).then(({ data }) => {
+      // localstorage set username and user can have access to it throughotu the pge
+      localStorage.setItem("id", JSON.stringify(data._id));
       window.location.replace("/userpage");
     });
   };
@@ -26,7 +32,6 @@ function Signup({ setUser }) {
     API.CreateNewUser(info).then(({ data }) => {
       // localstorage set username and user can have access to it throughotu the pge
       localStorage.setItem("id", JSON.stringify(data._id));
-      setUser(data);
       window.location.replace("/userpage");
     });
   };

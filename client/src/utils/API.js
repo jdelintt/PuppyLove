@@ -2,7 +2,7 @@ var axios = require("axios");
 
 export default {
   AuthenticateUser: function (data) {
-    return axios.get("/api/loginUser");
+    return axios.post("/api/loginUser", data);
   },
   CreateNewUser: function (data) {
     return axios.post("/api/createuser", data);

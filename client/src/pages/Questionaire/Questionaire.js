@@ -18,21 +18,23 @@ export default () => {
     allergies: 0,
   });
 
+  const [breeds, setBreed] = useState([]);
+
   console.log(APIdata);
 
   useEffect(() => {
     // getBreedList();
     var id = localStorage.getItem("id");
     setData({ ...APIdata, user: id });
+    getBreedList();
   }, []);
 
-  // function getBreedList() {
-  //   API.getBaseBreedsList()
-  //     .then((res) => setBreed({ breeds: res.data.message }))
-  //     .then((res) => console.log(res))
-  //     .catch((err) => console.log(err));
-  // }
-  // console.log(breedData);
+  function getBreedList() {
+    API.getBaseBreedsList()
+      .then((res) => setBreed(res.data.message))
+      .then((res) => console.log(res.data.message))
+      .catch((err) => console.log(err));
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -68,11 +70,11 @@ export default () => {
               placeholder="Type in a dog breed to begin"
               id="breed"
             />
-            {/* <datalist id="breeds">
-              {breedData.map((breed) => (
+            <datalist id="breeds">
+              {breeds.map((breed) => (
                 <option value={breed} key={breed} />
               ))}
-            </datalist> */}
+            </datalist>
 
             {/* from Aragon */}
             {/* <label for="breedInput">Select Breed</label>
@@ -180,17 +182,13 @@ export default () => {
           <button
             type="submit"
             onClick={handleSubmit}
-            href= "/userinfo"
+            href="/userinfo"
             className="btn btn-primary">
             Submit
           </button>
-          <Button
-                color="success"
-                size="lg"
-                href="/user"
-                >
-                Go to your user page!
-              </Button>
+          <Button color="success" size="lg" href="/user">
+            Go to your user page!
+          </Button>
         </form>
       </div>
     </>

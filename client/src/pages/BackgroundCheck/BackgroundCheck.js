@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../components/CustomButtons/Button.js";
 
 export default () => (
   <>
@@ -20,7 +21,13 @@ export default () => (
   <input type="text" class="form-control" placeholder="Default input" id="inputDefault"/>
 </div>
 
-
+<Button
+                color="success"
+                size="lg"
+                href="/hang"
+                >
+                Preferences
+              </Button>
 
 
 

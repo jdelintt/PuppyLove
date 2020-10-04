@@ -11,7 +11,7 @@ import CardHeader from "../../components/Card/CardHeader.js";
 import cardsStyle from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
 import CardFooter from "../../components/Card/CardFooter.js";
 import imgCMS from "./imgCMS";
-
+import DogsFill from "../../pages/UserPage/Userlist"
 
 const style = {
   ...cardsStyle

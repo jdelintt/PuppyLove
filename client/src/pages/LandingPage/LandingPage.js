@@ -59,20 +59,13 @@ export default function LandingPage({ user, ...rest }) {
                 need of HUGS!!
               </h4>
               <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank">
-                <i className="fas fa-play" />
-                Watch our home video
-              </Button>
+             
               <Button
                 color="success"
                 size="lg"
                 href="/signup"
                 >
-                Log In
+                Log In/SignUp
               </Button>
             </GridItem>
           </GridContainer>

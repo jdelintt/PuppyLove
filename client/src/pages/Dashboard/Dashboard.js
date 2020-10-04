@@ -20,7 +20,7 @@ function Signup({ setUser }) {
     API.AuthenticateUser(info).then(({ data }) => {
       // localstorage set username and user can have access to it throughotu the pge
       localStorage.setItem("id", JSON.stringify(data._id));
-      window.location.replace("/userpage");
+      window.location.replace("/background");
     });
   };
 
@@ -29,7 +29,7 @@ function Signup({ setUser }) {
     API.CreateNewUser(info).then(({ data }) => {
       // localstorage set username and user can have access to it throughotu the pge
       localStorage.setItem("id", JSON.stringify(data._id));
-      window.location.replace("/userpage");
+      window.location.replace("/background");
     });
   };
 

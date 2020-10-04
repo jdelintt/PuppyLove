@@ -95,17 +95,18 @@ function UserDogsFilter() {
       infinite={true}
     >
     
-      {dog.filter(name => name.includes('K')).map((item, index) => 
-        <p key={item._id}>
-        <Card1 profile style={{ maxWidth: "200px" }}>
-          <CardHeader image>
+      {dog.filter(name => name.breed === "Labrador")
+        .map((item, index) => 
+          <p key={item._id}>
+            <Card1 profile style={{ maxWidth: "200px" }}>
+            <CardHeader image>
               <a href="#pablo" onClick={e => e.preventDefault()}>
                   <img
                       src = {imgCMS[item.imagePath]}
                       alt="..."
                   />
               </a>
-          <div
+            <div
               className={classes.coloredShadow}
               style={{
               backgroundImage: `url(https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)`,

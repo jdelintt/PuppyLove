@@ -47,7 +47,9 @@ module.exports = {
     //console logs breed
     // console.log(req.body.breed);
     // console.log(db.UserInfo);
-    db.UserInfo.create(req.body)
+    db.UserInfo.create(req.body);
+    console
+      .log(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },

@@ -19,7 +19,7 @@ export default {
     axios.post("/api/userinfo", data);
   },
 
-  createPref: function (data) {
+  createPrefdog: function (data) {
     axios.post("/api/userinfo/:dogid", data);
   },
 

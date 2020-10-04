@@ -39,8 +39,7 @@ function Signup({ setUser }) {
         animationIn="wobble"
         animationOut="fadeOut"
         animationInDuration={1000}
-        isVisible={true}
-      >
+        isVisible={true}>
         <h1>Puppy Love</h1>
       </Animated>
       <Form>

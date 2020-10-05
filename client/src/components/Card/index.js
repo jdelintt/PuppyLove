@@ -105,7 +105,7 @@ function Card({ header, setLoading, link1, link2, isFirstCard }) {
             <div>
               
               <p key={item._id}>
-                <Card1 profile style={{ maxWidth: "200px" }}>
+                <Card1 profile style={{ maxWidth: "200px", maxHeight: "50px" }}>
                   <CardHeader image>
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                           <img

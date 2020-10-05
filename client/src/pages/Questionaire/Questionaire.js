@@ -75,21 +75,6 @@ export default () => {
                 <option value={breed} key={breed} />
               ))}
             </datalist>
-
-            {/* from Aragon */}
-            {/* <label for="breedInput">Select Breed</label>
-            <datalist
-              name="breed"
-              value={setData.breed}
-              onChange={handleInputChange}
-              class="form-control"
-              id="breedInput">
-              <option>Golden Retriever</option>
-              <option>Pitbull</option>
-              <option>German Shepherd</option>
-              <option>Chihuahua</option>
-              <option>Terrier</option>
-            </datalist> */}
           </div>
           <legend>Gender</legend>
           <div className="form-group">
@@ -99,7 +84,6 @@ export default () => {
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck1"
-                // value={setData.malePref}
               />
               <label className="custom-control-label" for="customCheck1">
                 Male
@@ -111,7 +95,6 @@ export default () => {
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck2"
-                // value={setData.femalePref}
               />
               <label className="custom-control-label" for="customCheck2">
                 Female
@@ -130,7 +113,6 @@ export default () => {
               type="range"
               className="custom-range"
               id="sizeSlide"
-              // value={}
             />
           </div>
           <div className="sliders">

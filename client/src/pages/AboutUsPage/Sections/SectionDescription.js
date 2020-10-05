@@ -22,49 +22,20 @@ export default function SectionDescription() {
           className={classNames(classes.mrAuto, classes.mlAuto)}
         >
           <h5 className={classes.description}>
-          Hi, welcome to Puppy Love. Here at Puppy Love it is our mission to helping
-      dogs get a second chance back in the real world. There are hundreds of
-      dogs in your area that could use your help, time, support, love and your
+          Hi, welcome to Puppy Love. Here at Puppy Love, our mission is to help
+      dogs get a second chance to go back out in the world. There are hundreds of
+      dogs in your area that could use your help, time, support, love, and
       home, more then you know.
-            more.
+            
           </h5>
-          <h5 className={classes.description}> Maybe you keep telling yourself that you don’t
-      have the space and/or the time to own a dog but still love and want to
-      spend time with our four legged companions, you’ve come to the right
-      place. Shelters in your area are struggling do this with the overwhelming
-      number of dogs that need your help, love and support. We would love to get
-      these dogs back out into world but the shelters don’t have the time to
-      take our fury little friends out and about, and that’s where you come in.
-      These animals need to be walked, they need to be played with, they to
-      interact with their canine pals so they can reinforce their social skills
+          <h5 className={classes.description}> Maybe you don’t
+      have the space or the time to own a dog right now but still love our fuzzy,four-legged companions: you’ve come to the right place. A happy, social pup is more likely to be adopted, but shelters in your area are struggling to provide their dogs with one-on-one love and support. We would love to improve the day-to-day quality of life for these pups while also getting
+      these dogs out of the shelter and into a home - that’s where you come in.
+      Walks, games, belly rubs, booty pats: more frequent socialization with our
+      canine pals so they can reinforce their social skills
       with good habits, but most all they need your LOVE!</h5>
-      <h5 className={classes.description}> How it works; first we ask that you pass a simple background check, reason
-      being for this is to insure that are dogs will not be harmed in any way, we love 
-      of pups and need to insure their safety. These animals will be in your care for
-      however much time you can spare. Then you will be asked a few simples
-      questions to help us pair you with the dog that’s right for you. We will
-      compile a list of dogs from a select number of shelters in your area. Now
-      from this list you can choose a play date and time for however many hours
-      would like to share. Now the first couple of times we ask that you spend
-      the time there at the shelter, maybe playing help feeding or even bathing
-      whatever you decide it’s your time. You may bring treats, toys or even new
-      collar whatever your heart desires. On your third visit is where it gets
-      fun, because this where you will be able to take your four legged
-      companion out of the shelter. We recommend and ask that you take the dog
-      for walks at the park or the beach, where ever there are other dogs and
-      people, to help get these dogs re-acclimated with their canine pals and
-      their best friends, US. We ask this for one main and important reason, we
-      are trying to find homes for these pets and we feel the best way to do
-      that is to get them out there mingling and associating themselves with
-      others.</h5>
-      <h5 className={classes.description}> To help with the adoption process we ask, after you meet your
-      friend, that you leave some nice and loving comments about the time you
-      spent with your dog. Write about him/hers type of personality,
-      temperament, the things he/she likes to do; if they like to play ball or
-      tug of war, maybe the type of treats they like, whatever you feel to help
-      get these pups to a find a new home and family. Who knows maybe at the end
-      of the day you might want to adopt your new friend and make him/her apart
-      of your family, because puppy love is for love for everyone!</h5>
+      <h5 className={classes.description}> How it works: first we ask that you pass a simple background check, to ensure the safety of everyone involved, dog or person. Then you will be asked a few simple questions to help us pair you with the dog that’s right for you. Using your preferences, we compile a list of dogs from a select number of shelters in your area. From this list, you can choose a play date and time for however many hours you can give. The first couple of times with a new dog, we ask that you spend the time there at the shelter, for the dog's comfort and yours. On your third visit, you'll finally get to show off the pup you've been seeing, because you will be able to take your four-legged companion out of the shelter. Tire them out with a game of fetch on the beach, or stalk squirrels together in a park: we believe the best way to find forever homes for these pups is to get them out there, happy, healthy, and mingling.</h5>
+      <h5 className={classes.description}> Did your pup love tennis balls but hate tug-of-war? A little nervous around bigger dogs? To help with the adoption process, we ask that, after you meet your friend, you leave some comments about your experience. Write about their personality, temperament, favorite games and treats: these details give a prospective adopter a better idea about any pup they're interested in. Who knows? Maybe, at the end of the day, you might just be their forever home after all. Whether you're looking to adopt immediately or just looking to give, Puppy Love is for love for everyone!</h5>
         </GridItem>
       </GridContainer>
     </div>

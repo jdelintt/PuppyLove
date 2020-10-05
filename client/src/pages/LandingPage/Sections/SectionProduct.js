@@ -24,10 +24,9 @@ export default function SectionProduct() {
         <GridItem xs={12} sm={8} md={8}>
           <h2 className={classes.title}>Who's ready for some puppy love?</h2>
           <h5 className={classes.description}>
-          Besides babies, there’s nothing in the world that brings humans as much joy as puppies. They’re smart, wise and more loyal than most humans you know.
-            more.
+          Few things - maybe nothing - in the world brings humans as much joy as puppies. Smart, loving and loyal: you know what I'm talking about.
           </h5>
-          <h2 className={classes.title}>Scroll through all ouf our adorable pups!</h2>
+          <h2 className={classes.title}>Scroll through all of our adorable pups!</h2>
           
           
         </GridItem>

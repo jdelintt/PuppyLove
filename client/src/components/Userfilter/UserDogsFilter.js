@@ -68,23 +68,7 @@ function UserDogsFilter() {
 
   useEffect(() => {
     findDogs();
-    getDogData();
   }, []);
-
-  const [userPref, setUserPref] = useState("");
-
-  console.log(localStorage.getItem("id"));
-  const thisUser = localStorage.getItem("id");
-
-  //saving it into hooks
-  function getDogData() {
-    API.getDogs().then((res) => {
-      console.log(res);
-      setUserPref(res);
-    });
-  }
-
-  console.log(userPref);
 
   function findDogs() {
     API.getDogs()
@@ -100,13 +84,61 @@ function UserDogsFilter() {
   const classes = useStyles();
   return (
     <div>
-
-      <Carousel responsive={responsive} swipeable={true} infinite={true}>
+      <Carousel
+        responsive={responsive}
+        swipeable={true}
+        infinite={true}
+        additionalTransfrom={0}
+        arrows
+        autoPlaySpeed={3000}
+        centerMode
+        className=""
+        containerClass="container"
+        dotListClass=""
+        draggable
+        focusOnSelect={false}
+        infinite
+        itemClass=""
+        keyBoardControl
+        minimumTouchDrag={80}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        responsive={{
+          desktop: {
+            breakpoint: {
+              max: 3000,
+              min: 1024,
+            },
+            items: 3,
+            partialVisibilityGutter: 40,
+          },
+          mobile: {
+            breakpoint: {
+              max: 464,
+              min: 0,
+            },
+            items: 1,
+            partialVisibilityGutter: 30,
+          },
+          tablet: {
+            breakpoint: {
+              max: 1024,
+              min: 464,
+            },
+            items: 2,
+            partialVisibilityGutter: 30,
+          },
+        }}
+        showDots={false}
+        sliderClass=""
+        slidesToSlide={1}
+        swipeable
+      >
         {dog
-          .filter((name) => name.breed === userPref)
+          .filter((name) => name.breed === "Labrador")
           .map((item, index) => (
             <p key={item._id}>
-              <Card1 profile style={{ maxWidth: "200px" }}>
+              <Card1 profile style={{ maxWidth: "200px", maxHeight: "30px" }}>
                 <CardHeader image>
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
                     <img src={imgCMS[item.imagePath]} alt="..." />
@@ -122,7 +154,8 @@ function UserDogsFilter() {
                 <CardBody>
                   <h4 className={classes.cardTitle}>{item.name}</h4>
                   <h6
-                    className={`${classes.cardCategory} ${classes.cardDescription}`}>
+                    className={`${classes.cardCategory} ${classes.cardDescription}`}
+                  >
                     For Adoption!
                   </h6>
                   <CustomInput
@@ -133,67 +166,6 @@ function UserDogsFilter() {
                     formControlProps={{
                       fullWidth: true,
                     }}
-    <Carousel 
-      responsive={responsive}
-      swipeable={true}
-      infinite={true}
-      additionalTransfrom={0}
-  arrows
-  autoPlaySpeed={3000}
-  centerMode
-  className=""
-  containerClass="container"
-  dotListClass=""
-  draggable
-  focusOnSelect={false}
-  infinite
-  itemClass=""
-  keyBoardControl
-  minimumTouchDrag={80}
-  renderButtonGroupOutside={false}
-  renderDotsOutside={false}
-  responsive={{
-    desktop: {
-      breakpoint: {
-        max: 3000,
-        min: 1024
-      },
-      items: 3,
-      partialVisibilityGutter: 40
-    },
-    mobile: {
-      breakpoint: {
-        max: 464,
-        min: 0
-      },
-      items: 1,
-      partialVisibilityGutter: 30
-    },
-    tablet: {
-      breakpoint: {
-        max: 1024,
-        min: 464
-      },
-      items: 2,
-      partialVisibilityGutter: 30
-    }
-  }}
-  showDots={false}
-  sliderClass=""
-  slidesToSlide={1}
-  swipeable
-    >
-    
-      {dog.filter(name => name.breed === "Labrador")
-        .map((item, index) => 
-          <p key={item._id}>
-            <Card1 profile style={{ maxWidth: "200px", maxHeight: "30px" }}>
-            <CardHeader image>
-              <a href="#pablo" onClick={e => e.preventDefault()}>
-                  <img
-                      src = {imgCMS[item.imagePath]}
-                      alt="..."
-
                   />
                   {/* {comment ? null : <Button onClick={post comment function}>Submit</Button>} */}
                   <Button

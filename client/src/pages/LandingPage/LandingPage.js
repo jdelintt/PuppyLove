@@ -28,6 +28,7 @@ import SectionWork from "./Sections/SectionWork.js";
 import BackgroundVideo from "../../components/backgroundVideo/backgroundVideo"
 import Pets from "@material-ui/icons/Pets";
 
+
 const useStyles = makeStyles(landingPageStyle);
 
 export default function LandingPage({ user, ...rest }) {

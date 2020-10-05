@@ -1,6 +1,19 @@
 var axios = require("axios");
 
 export default {
+  checkUser: function (data) {
+    return axios
+      .get(
+        "https://cors-anywhere.herokuapp.com/http://www.JailBase.com/api/1/recent/?" +
+          "source_id=" +
+          data.Sherrif +
+          "&" +
+          "last_name=" +
+          data.lastName
+      )
+      .then(console.log(data.lastName));
+  },
+
   AuthenticateUser: function (data) {
     return axios.post("/api/loginUser", data);
   },

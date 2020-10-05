@@ -9,7 +9,7 @@ import Pets from "@material-ui/icons/Pets";
 // core components
 import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
-import InfoArea from "../../../components/InfoArea/InfoArea.js";
+import InfoArea from "../../../components/InfoArea/InfoArea1.js";
 import Dogsfill from "../../UserPage/Userlist"
 
 import productStyle from "../../../assets/jss/material-kit-pro-react/views/componentsSections/landingPageSections/productStyle";
@@ -27,7 +27,11 @@ export default function SectionProduct() {
           Besides babies, there’s nothing in the world that brings humans as much joy as puppies. They’re smart, wise and more loyal than most humans you know.
             more.
           </h5>
+          <h2 className={classes.title}>Scroll through all ouf our adorable pups!</h2>
+          
+          
         </GridItem>
+        <Dogsfill/>
       </GridContainer>
       <div>
         <GridContainer>

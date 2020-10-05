@@ -1,6 +1,9 @@
 var axios = require("axios");
 
 export default {
+  updatedbComment: function (data, commentInput) {
+    return axios.post("/api/update/" + data, commentInput);
+  },
   checkUser: function (data) {
     return axios
       .get(

@@ -3,6 +3,18 @@ console.log(db);
 
 // interacting with database
 module.exports = {
+  updateComment: function (req, res) {
+    db.UserInfo.findOneAndUpdate(
+      { _id: req.params.id },
+      {
+        $set: {
+          comment: req.body.comment,
+        },
+      }
+    )
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
+  },
   createUser: function (req, res) {
     db.UserSchema.create(req.body)
       .then((dbModel) => res.json(dbModel))

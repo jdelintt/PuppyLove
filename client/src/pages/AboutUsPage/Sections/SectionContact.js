@@ -37,7 +37,7 @@ export default function SectionContact() {
           <h4 className={classNames(classes.description, classes.textCenter)}>
             Divide details about your product or agency work into parts. Write a
             few lines about each one and contact us about any further
-            collaboration. We will get back to you in a couple of hours.
+            collaboration. We will get back to you within a business day.
           </h4>
           <form>
             <GridContainer>

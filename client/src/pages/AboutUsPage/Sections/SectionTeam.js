@@ -51,7 +51,7 @@ export default function SectionTeam() {
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Jesus DeLintt</h4>
-              <h6 className={classes.textMuted}>Puppy Player</h6>
+              <h6 className={classes.textMuted}>Puppy Director</h6>
               <p className={classes.cardDescription}>
                 I love dem pooches!
               </p>
@@ -82,9 +82,9 @@ export default function SectionTeam() {
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Andrew Kim</h4>
-              <h6 className={classes.textMuted}>Puppy Player</h6>
+              <h6 className={classes.textMuted}>Puppy Coordinator</h6>
               <p className={classes.cardDescription}>
-                I love pooches too!
+                Did someone say more pups?
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
@@ -113,7 +113,7 @@ export default function SectionTeam() {
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Aileen Wang</h4>
-              <h6 className={classes.textMuted}>Puppy Player</h6>
+              <h6 className={classes.textMuted}>Puppy Lawyer</h6>
               <p className={classes.cardDescription}>
                 I love bad bitches!
               </p>
@@ -141,7 +141,7 @@ export default function SectionTeam() {
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Aragon</h4>
-              <h6 className={classes.textMuted}>Puppy Player</h6>
+              <h6 className={classes.textMuted}>Puppy Campaign Manager</h6>
               <p className={classes.cardDescription}>
                 I can't remember the last time I slept.
               </p>
@@ -172,7 +172,7 @@ export default function SectionTeam() {
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Ryan Braun</h4>
-              <h6 className={classes.textMuted}>Puppy Player</h6>
+              <h6 className={classes.textMuted}>Puppy PR</h6>
               <p className={classes.cardDescription}>
                 Sometimes you just gotta say NO.
               </p>

@@ -74,7 +74,7 @@ export default function CardExampleCardRotating() {
                   </h3>
                 </a>
                 <p className={classes.cardDescriptionWhite}>
-                 Don't worry, having multiple dogs is super easy.....
+                  Don't worry, having multiple dogs is super easy.....
                 </p>
               </CardBody>
             </div>

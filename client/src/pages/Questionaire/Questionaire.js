@@ -40,6 +40,7 @@ export default () => {
     event.preventDefault();
     console.log(APIdata);
     API.createPref(APIdata);
+    window.location.replace("/user");
   };
   //event.target.checked
   const handleInputChange = ({ target: { name, value } }) => {

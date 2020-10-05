@@ -12,6 +12,7 @@ import cardsStyle from "../../assets/jss/material-kit-pro-react/views/components
 import CardFooter from "../../components/Card/CardFooter.js";
 import { makeStyles } from "@material-ui/core/styles";
 import Favorite from "@material-ui/icons/Favorite";
+import Box from "@material-ui/core/Box";
 
 const style = {
   ...cardsStyle,
@@ -68,7 +69,20 @@ function UserDogsFilter() {
 
   useEffect(() => {
     findDogs();
+    getDogData();
   }, []);
+
+  const [userPref, setUserPref] = useState("");
+
+  const thisUser = localStorage.getItem("id");
+
+  //saving it into hooks
+  function getDogData() {
+    API.getDogs().then((res) => {
+      console.log(res);
+      setUserPref(res);
+    });
+  }
 
   function findDogs() {
     API.getDogs()
@@ -81,64 +95,32 @@ function UserDogsFilter() {
     setComment({ ...commentInput, [name]: value });
     console.log(commentInput);
   };
+
+  function updateComment(id, commentInput, event) {
+    event.preventDefault();
+    API.updatedbComment(id, commentInput)
+      .then((res) => findDogs())
+      .catch((err) => console.log(err));
+  }
   const classes = useStyles();
   return (
-    <div>
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      minHeight="100vh"
+    >
       <Carousel
         responsive={responsive}
         swipeable={true}
         infinite={true}
-        additionalTransfrom={0}
-        arrows
-        autoPlaySpeed={3000}
-        centerMode
-        className=""
-        containerClass="container"
-        dotListClass=""
-        draggable
-        focusOnSelect={false}
-        infinite
-        itemClass=""
-        keyBoardControl
-        minimumTouchDrag={80}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024,
-            },
-            items: 3,
-            partialVisibilityGutter: 40,
-          },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0,
-            },
-            items: 1,
-            partialVisibilityGutter: 30,
-          },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464,
-            },
-            items: 2,
-            partialVisibilityGutter: 30,
-          },
-        }}
-        showDots={false}
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable
+        justifyContent="center"
       >
-        {dog
-          .filter((name) => name.breed === "Labrador")
-          .map((item, index) => (
+        {
+          (dog.filter((name) => name.breed === "Labrador"),
+          dog.map((item, index) => (
             <p key={item._id}>
-              <Card1 profile style={{ maxWidth: "200px", maxHeight: "30px" }}>
+              <Card1 profile style={{ maxWidth: "100px" }}>
                 <CardHeader image>
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
                     <img src={imgCMS[item.imagePath]} alt="..." />
@@ -155,22 +137,18 @@ function UserDogsFilter() {
                   <h4 className={classes.cardTitle}>{item.name}</h4>
                   <h6
                     className={`${classes.cardCategory} ${classes.cardDescription}`}
-                  >
-                    For Adoption!
-                  </h6>
+                  ></h6>
                   <CustomInput
                     name="comment"
                     labelText="Leave a comment!"
                     id={`float ${index + 1}`}
-                    onChange={handleInput}
+                    onChange={(e) => handleInput()}
                     formControlProps={{
                       fullWidth: true,
                     }}
-                  />
+                  />{" "}
                   {/* {comment ? null : <Button onClick={post comment function}>Submit</Button>} */}
-                  <Button
-                  // onClick = {postfunction}
-                  >
+                  <Button onClick={() => updateComment(item._id, commentInput)}>
                     Submit
                   </Button>
                   <Button round className={classes.buttonStyle}>
@@ -181,9 +159,10 @@ function UserDogsFilter() {
               </Card1>
               {/* <img src = {require(`../../assets/img/dogpics/${item.image}`)}/> */}
             </p>
-          ))}
+          )))
+        }
       </Carousel>
-    </div>
+    </Box>
   );
 }
 

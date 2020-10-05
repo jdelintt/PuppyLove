@@ -23,7 +23,6 @@ export default () => {
   console.log(APIdata);
 
   useEffect(() => {
-    // getBreedList();
     var id = localStorage.getItem("id");
     setData({ ...APIdata, user: id });
     getBreedList();
@@ -166,7 +165,8 @@ export default () => {
             type="submit"
             onClick={handleSubmit}
             href="/userinfo"
-            className="btn btn-primary">
+            className="btn btn-primary"
+          >
             Submit
           </button>
           <Button color="success" size="lg" href="/user">

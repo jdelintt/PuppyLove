@@ -3,8 +3,11 @@ const userInfoRoutes = require("./userInfo");
 const createUser = require("./newUser");
 const loginUser = require("./loginUser");
 const db = require("../../models");
+const updateData = require("./Update");
 
 router.use("/userinfo", userInfoRoutes);
+
+router.use("/update", updateData);
 
 router.use("/createuser", createUser);
 
